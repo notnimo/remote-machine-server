@@ -1,7 +1,5 @@
-import { InputGroupTooltip } from "@/src/ui/login/form";
-
-export default function Main() {
+export default function Foo() {
   return (
-    <InputGroupTooltip />
+    <div>Hello World!</div>
   );
 }
