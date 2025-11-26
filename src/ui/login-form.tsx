@@ -1,4 +1,4 @@
-import { LogIn } from "lucide-react";
+import { Divide, LogIn } from "lucide-react";
 
 import { Button } from "@/src/components/button"
 import {
@@ -11,19 +11,21 @@ import {
 import { Input } from "@/src/components/input"
 import { Label } from "@/src/components/label"
 
-export function LoginHeaderGroup(){
+export function FormHeaderGroup({ formHeader, formDescription }: { formHeader?: string; formDescription?: string }){
   return(
     <CardHeader>
-      <CardTitle className="text-white">Login to your account</CardTitle>
-      <CardDescription className="text-white">
-        Enter your username below to login to your account
-      </CardDescription>
+      <CardTitle className="text-white"> {formHeader} </CardTitle>
+      <CardDescription className="text-white"> {formDescription} </CardDescription>
     </CardHeader>
   );
 }
 
-export function LoginInputGroup(){
-  return(
+export function FormInputGroup({ inputFields }: { inputFields?: any }){
+  let g: any = (<div>foo</div>);
+  for (const field in inputFields) {}
+
+  return(<div>DIO CANE</div>);
+  /*return(
     <CardContent className="text-white">
       <form>
         <div className="flex flex-col gap-6">
@@ -51,7 +53,7 @@ export function LoginInputGroup(){
         </div>
       </form>
     </CardContent>
-  );
+  );*/
 }
 
 export function LoginButtonGroup(){
