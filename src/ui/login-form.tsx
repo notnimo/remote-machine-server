@@ -59,44 +59,33 @@ export function FormInputGroup({ inputFields }: { inputFields?: any }){
     }    
   }
 
-  return(<div>DIO CANE</div>);
-  /*return(
+  return(
     <CardContent className="text-white">
       <form>
         <div className="flex flex-col gap-6">
-          <div className="grid gap-2">
-            <Label htmlFor="username">Username</Label>
-            <Input
-              id="user-name"
-              type="user-name"
-              placeholder="username"
-              required
-            />
-          </div>
-          <div className="grid gap-2">
-            <div className="flex items-center">
-              <Label htmlFor="password">Password</Label>
-              <a
-                href="#"
-                className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-              >
-                Forgot your password?
-              </a>
-            </div>
-            <Input id="password" type="password" placeholder="password" required />
-          </div>
+          {g}
         </div>
       </form>
     </CardContent>
-  );*/
+  );
 }
 
-export function LoginButtonGroup(){
+export function FormSubmitGroup({type, content}: {type: string, content?: string}){
+  if(type === "login"){
+    return (
+      <CardFooter className="flex-col gap-2">
+        <Button type="submit" className="w-full">
+          <LogIn className="" />
+          {content}
+        </Button>
+      </CardFooter>
+    );
+  }
+
   return (
     <CardFooter className="flex-col gap-2">
       <Button type="submit" className="w-full">
-        <LogIn className="" />
-        Login
+        {content}
       </Button>
     </CardFooter>
   );
