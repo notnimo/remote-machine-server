@@ -4,7 +4,7 @@ import {
 	FormHeaderGroup,
 	FormSubmitGroup,
 	FormInputGroup,
-} from "@/src/ui/login-form";
+} from "@/src/ui/form-components";
 
 export default function LoginCard() {
 	const usernameField = {
