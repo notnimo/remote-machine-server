@@ -21,8 +21,43 @@ export function FormHeaderGroup({ formHeader, formDescription }: { formHeader?: 
 }
 
 export function FormInputGroup({ inputFields }: { inputFields?: any }){
-  let g: any = (<div>foo</div>);
-  for (const field in inputFields) {}
+  let g: any;
+  for (const field in inputFields) {
+    if (field === "username") {
+      g = (
+        <>
+          {g}
+          <div className="grid gap-2">
+            <Label htmlFor="username">Username</Label>
+            <Input
+              id="user-name"
+              type="user-name"
+              placeholder="username"
+              required
+            />
+          </div>
+        </>
+      );
+    }else if (field === "password") {
+      g = (
+        <>
+          {g}
+          <div className="grid gap-2">
+            <div className="flex items-center">
+              <Label htmlFor="password">Password</Label>
+              <a
+                href="#"
+                className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
+              >
+                Forgot your password?
+              </a>
+            </div>
+            <Input id="password" type="password" placeholder="password" required />
+          </div>
+        </>
+      );
+    }    
+  }
 
   return(<div>DIO CANE</div>);
   /*return(
