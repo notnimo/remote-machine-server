@@ -16,7 +16,7 @@ export default function ManageAccount() {
 	const handleLeave = () => {
 		timeoutRef.current = setTimeout(() => {
 			setVisible(false);
-		}, 150); // delay before fade-out
+		}, 150);
 	};
 
 	return (
@@ -29,8 +29,6 @@ export default function ManageAccount() {
 				<UserRound />
 				Account
 			</Button>
-
-			{/* Tooltip always rendered, animated by opacity */}
 			<div
 				className={`
 					absolute left-0 mt-2 w-40 rounded-xl border bg-white p-3 shadow-lg
