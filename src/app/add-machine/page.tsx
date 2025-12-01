@@ -7,12 +7,12 @@ import {
 } from "@/src/ui/form-components";
 
 export default function AddMachineCard() {
-	const ipField = {
+	const idField = {
 		htmlFor: "username",
-		label: "Local IP Address",
-		placeholder: "###.###.###.###",
+		label: "Machine ID",
+		placeholder: "a1b2c3d4e5f6",
 		type: "user-name",
-		id: "ip-address-field",
+		id: "id-address-field",
 	};
 	const machinePasswordField = {
 		htmlFor: "password",
@@ -26,11 +26,11 @@ export default function AddMachineCard() {
 			<Card className="w-full max-w-sm bg-black">
 				<FormHeaderGroup
 					formHeader="Add Machine to list"
-					formDescription="Input local IP and password of the machine"
+					formDescription="Input machine ID and password"
 				/>
 				<FormInputGroup
 					inputFields={{
-						username: ipField,
+						username: idField,
 						password: machinePasswordField,
 					}}
 				/>
