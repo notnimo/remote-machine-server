@@ -23,7 +23,7 @@ export default function AddMachineCard() {
 	};
 	const machinePasswordField = {
 		htmlFor: "password",
-		label: "Machine Password",
+		label: "Set Machine Password",
 		placeholder: "machine password",
 		type: "password",
 		id: "machine-password-field",
@@ -32,8 +32,8 @@ export default function AddMachineCard() {
 		<div className="flex h-screen flex-col items-center justify-center gap-6 p-4">
 			<Card className="w-full max-w-sm bg-black">
 				<FormHeaderGroup
-					formHeader="Add Machine to list"
-					formDescription="Input machine ID and password"
+					formHeader="Register Machine to Network"
+					formDescription="Input local IP  of the machine, ID and password"
 				/>
 				<FormInputGroup
 					inputFields={{

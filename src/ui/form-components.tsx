@@ -30,25 +30,26 @@ export function FormHeaderGroup({
 
 export function FormInputGroup({ inputFields }: { inputFields?: any }) {
 	let g: any;
-	for (const field in inputFields) {
-		if (field === "username") {
+	for (let field in inputFields) {
+		JSON.stringify(field);
+		if (field.startsWith("username")) {
 			g = (
 				<>
 					{g}
 					<div className="grid gap-2">
-						<Label htmlFor={inputFields["username"]["htmlFor"]}>
-							{inputFields["username"]["label"]}
+						<Label htmlFor={inputFields[field]["htmlFor"]}>
+							{inputFields[field]["label"]}
 						</Label>
 						<Input
-							id={inputFields["username"]["id"]}
-							type={inputFields["username"]["type"]}
-							placeholder={inputFields["username"]["placeholder"]}
+							id={inputFields[field]["id"]}
+							type={inputFields[field]["type"]}
+							placeholder={inputFields[field]["placeholder"]}
 							required
 						/>
 					</div>
 				</>
 			);
-		} else if (field === "password") {
+		} else if (field.startsWith("password")) {
 			g = (
 				<>
 					{g}
