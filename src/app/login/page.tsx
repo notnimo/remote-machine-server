@@ -5,7 +5,7 @@ import {
 	FormInputGroup,
 } from "@/src/ui/form-components";
 
-import { usernameField, passwordField } from "@/src/app/login/fields";
+import { usernameField, passwordField } from "@/src/lib/form-fields";
 
 export default function LoginCard() {
 	return (

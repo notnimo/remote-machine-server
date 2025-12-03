@@ -1,4 +1,4 @@
-import { Divide, LogIn } from "lucide-react";
+import { LogIn } from "lucide-react";
 
 import { Button } from "@/src/components/button";
 import {
@@ -8,8 +8,8 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/src/components/card";
-import { Input } from "@/src/components/input";
-import { Label } from "@/src/components/label";
+
+import { Username, Password } from "@/src/ui/input-types";
 
 export function FormHeaderGroup({
 	formHeader,
@@ -36,42 +36,14 @@ export function FormInputGroup({ inputFields }: { inputFields?: any }) {
 			g = (
 				<>
 					{g}
-					<div className="grid gap-2">
-						<Label htmlFor={inputFields[field]["htmlFor"]}>
-							{inputFields[field]["label"]}
-						</Label>
-						<Input
-							id={inputFields[field]["id"]}
-							type={inputFields[field]["type"]}
-							placeholder={inputFields[field]["placeholder"]}
-							required
-						/>
-					</div>
+					<Username inputFields={inputFields} field={field} />
 				</>
 			);
 		} else if (field.startsWith("password")) {
 			g = (
 				<>
 					{g}
-					<div className="grid gap-2">
-						<div className="flex items-center">
-							<Label htmlFor={inputFields["password"]["htmlFor"]}>
-								{inputFields["password"]["label"]}
-							</Label>
-							<a
-								href="#"
-								className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-							>
-								Forgot your password?
-							</a>
-						</div>
-						<Input
-							id={inputFields["password"]["id"]}
-							type={inputFields["password"]["type"]}
-							placeholder={inputFields["password"]["placeholder"]}
-							required
-						/>
-					</div>
+					<Password inputFields={inputFields} field={field} />
 				</>
 			);
 		}
