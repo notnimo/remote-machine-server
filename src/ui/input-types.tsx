@@ -52,3 +52,13 @@ export function Password({
 		</div>
 	);
 }
+
+export function Select({
+	inputFields,
+	field,
+}: {
+	inputFields?: any;
+	field?: any;
+}) {
+	return <div></div>;
+}
