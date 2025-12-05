@@ -38,4 +38,13 @@ const ipField = {
 	id: "ip-address-field",
 };
 
-export { usernameField, passwordField, idField, machinePasswordField, ipField };
+const accessLevelField = {};
+
+export {
+	usernameField,
+	passwordField,
+	idField,
+	machinePasswordField,
+	ipField,
+	accessLevelField,
+};

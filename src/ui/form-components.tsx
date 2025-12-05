@@ -9,7 +9,7 @@ import {
 	CardTitle,
 } from "@/src/components/card";
 
-import { Username, Password } from "@/src/ui/input-types";
+import { Username, Password, Select } from "@/src/ui/input-types";
 
 export function FormHeaderGroup({
 	formHeader,
@@ -44,6 +44,13 @@ export function FormInputGroup({ inputFields }: { inputFields?: any }) {
 				<>
 					{g}
 					<Password inputFields={inputFields} field={field} />
+				</>
+			);
+		} else if (field.startsWith("select")) {
+			g = (
+				<>
+					{g}
+					<Select inputFields={inputFields} field={field} />
 				</>
 			);
 		}
