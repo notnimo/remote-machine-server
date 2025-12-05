@@ -1,3 +1,5 @@
+import { DropdownMenuDialog } from "@/src/ui/base/account-mng";
+
 export default function Foo() {
-	return <div>Foo</div>;
+	return <DropdownMenuDialog />;
 }
