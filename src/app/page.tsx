@@ -1,4 +1,4 @@
-import { DropdownMenuDialog } from "@/src/ui/base/account-mng";
+import { DropdownMenuDialog } from "@/src/ui/account-mng";
 
 export default function Foo() {
 	return <DropdownMenuDialog />;

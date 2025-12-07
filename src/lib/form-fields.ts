@@ -1,42 +1,12 @@
-const usernameField = {
-	htmlFor: "username",
-	label: "Username",
-	placeholder: "username",
-	type: "user-name",
-	id: "user-name",
-};
+const usernameField = {};
 
-const passwordField = {
-	htmlFor: "password",
-	label: "Password",
-	placeholder: "password",
-	type: "password",
-	id: "password",
-};
+const passwordField = {};
 
-const idField = {
-	htmlFor: "username",
-	label: "Machine ID",
-	placeholder: "a1b2c3d4e5f6",
-	type: "user-name",
-	id: "id-address-field",
-};
+const idField = {};
 
-const machinePasswordField = {
-	htmlFor: "password",
-	label: "Machine Password",
-	placeholder: "machine password",
-	type: "password",
-	id: "machine-password-field",
-};
+const machinePasswordField = {};
 
-const ipField = {
-	htmlFor: "username",
-	label: "Machine Local IP",
-	placeholder: "###.###.###.###",
-	type: "user-name",
-	id: "ip-address-field",
-};
+const ipField = {};
 
 const accessLevelField = {};
 

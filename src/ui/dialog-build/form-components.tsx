@@ -9,7 +9,7 @@ import {
 	CardTitle,
 } from "@/src/components/card";
 
-import { Username, Password, Select } from "@/src/ui/input-types";
+import { Username, Password, Select } from "@/src/ui/dialog-build/input-types";
 
 export function FormHeaderGroup({
 	formHeader,
