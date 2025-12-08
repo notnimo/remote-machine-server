@@ -27,6 +27,7 @@ import { Textarea } from "@/src/components/textarea";
 
 export function DropdownMenuDialog() {
 	const [showNewDialog, setShowNewDialog] = useState(false);
+	const [logOut, logUserOut] = useState(false);
 
 	return (
 		<>
@@ -41,7 +42,7 @@ export function DropdownMenuDialog() {
 						<DropdownMenuItem onSelect={() => setShowNewDialog(true)}>
 							Manage Account
 						</DropdownMenuItem>
-						<DropdownMenuItem>
+						<DropdownMenuItem onSelect={() => logUserOut(true)}>
 							<LogOut /> Logout
 						</DropdownMenuItem>
 					</DropdownMenuGroup>
@@ -59,7 +60,7 @@ export function DropdownMenuDialog() {
 					<FieldGroup className="pb-3">
 						<Field>
 							<FieldLabel htmlFor="filename">File Name</FieldLabel>
-							<Input id="filename" name="filename" placeholder="document.txt" />
+							<Input id="filename" name="filename" placeholder="document.txt"/>
 						</Field>
 					</FieldGroup>
 					<DialogFooter>
