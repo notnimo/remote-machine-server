@@ -3,7 +3,7 @@ import {
 	LoginButtonGroup,
 	LoginHeaderGroup,
 	LoginInputGroup,
-} from "@/src/ui/login/components";
+} from "@/src/ui/login-components";
 
 export default function LoginCard() {
 	return (
