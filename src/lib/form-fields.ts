@@ -5,8 +5,17 @@ function foo(ciao: string) {
 type baseDialog = {
 	title: string;
 	description: string;
-	fields: object;
+	fields: Record<string, baseField>;
 	closeButton: "standard" | object;
+};
+
+type baseField = {
+	htmlFor: string;
+	id: string;
+	name: string;
+	type: any;
+	placeholder?: string;
+	autoComplete?: string;
 };
 
 const usernameField = {

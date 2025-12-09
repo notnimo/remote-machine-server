@@ -27,87 +27,51 @@ import { Label } from "@/src/components/label";
 import { Textarea } from "@/src/components/textarea";
 
 export function DropdownMenuDialog() {
-	const [showNewDialog, setShowNewDialog] = useState(false);
-	const [showShareDialog, setShowShareDialog] = useState(false);
+	const [showAddMachineDialog, setShowAddMachineDialog] = useState(false);
 
 	return (
 		<>
-			<Button onClick={() => setShowNewDialog(true)}>click</Button>
-			<DropdownMenu modal={false}>
-				<DropdownMenuTrigger asChild>
-					<Button variant="outline" aria-label="Open menu" size="icon-sm">
-						<MoreHorizontalIcon />
-					</Button>
-				</DropdownMenuTrigger>
-				<DropdownMenuContent className="w-40" align="end">
-					<DropdownMenuLabel>File Actions</DropdownMenuLabel>
-					<DropdownMenuGroup>
-						<DropdownMenuItem onSelect={() => setShowNewDialog(true)}>
-							New File...
-						</DropdownMenuItem>
-						<DropdownMenuItem onSelect={() => setShowShareDialog(true)}>
-							Share...
-						</DropdownMenuItem>
-						<DropdownMenuItem disabled>Download</DropdownMenuItem>
-					</DropdownMenuGroup>
-				</DropdownMenuContent>
-			</DropdownMenu>
-			<Dialog open={showNewDialog} onOpenChange={setShowNewDialog}>
+			<Button onClick={() => setShowAddMachineDialog(true)}>click</Button>
+			<Dialog
+				open={showAddMachineDialog}
+				onOpenChange={setShowAddMachineDialog}
+			>
 				<DialogContent className="sm:max-w-[425px]">
 					<DialogHeader>
-						<DialogTitle>Create New File</DialogTitle>
+						<DialogTitle>Add Machine</DialogTitle>
 						<DialogDescription>
-							Provide a name for your new file. Click create when you&apos;re
-							done.
-						</DialogDescription>
-					</DialogHeader>
-					<FieldGroup className="pb-3">
-						<Field>
-							<FieldLabel htmlFor="filename">File Name</FieldLabel>
-							<Input id="filename" name="filename" placeholder="document.txt" />
-						</Field>
-					</FieldGroup>
-					<DialogFooter>
-						<DialogClose asChild>
-							<Button variant="outline">Cancel</Button>
-						</DialogClose>
-						<Button type="submit">Create</Button>
-					</DialogFooter>
-				</DialogContent>
-			</Dialog>
-			<Dialog open={showShareDialog} onOpenChange={setShowShareDialog}>
-				<DialogContent className="sm:max-w-[425px]">
-					<DialogHeader>
-						<DialogTitle>Share File</DialogTitle>
-						<DialogDescription>
-							Anyone with the link will be able to view this file.
+							Enter machine ID and password to add it to your account.
 						</DialogDescription>
 					</DialogHeader>
 					<FieldGroup className="py-3">
 						<Field>
-							<Label htmlFor="email">Email Address</Label>
+							<Label htmlFor="username">Machine ID</Label>
 							<Input
-								id="email"
-								name="email"
+								id="username-field"
+								name="username"
 								type="email"
-								placeholder="shadcn@vercel.com"
+								placeholder="a1b2c3d4"
 								autoComplete="off"
 							/>
 						</Field>
 						<Field>
-							<FieldLabel htmlFor="message">Message (Optional)</FieldLabel>
-							<Textarea
-								id="message"
-								name="message"
-								placeholder="Check out this file"
+							<FieldLabel htmlFor="password">Machine Password</FieldLabel>
+							<Input
+								id="password-field"
+								name="username"
+								type="password"
+								placeholder="••••••••••••••••"
+								autoComplete="off"
 							/>
 						</Field>
 					</FieldGroup>
 					<DialogFooter>
 						<DialogClose asChild>
-							<Button variant="outline">Cancel</Button>
+							<Button>Cancel</Button>
 						</DialogClose>
-						<Button type="submit">Send Invite</Button>
+						<Button type="submit" variant="outline">
+							Add
+						</Button>
 					</DialogFooter>
 				</DialogContent>
 			</Dialog>
