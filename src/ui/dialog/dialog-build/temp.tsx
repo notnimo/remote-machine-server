@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { MoreHorizontalIcon } from "lucide-react";
 
 import { Button } from "@/src/components/button";
 import {
@@ -13,29 +12,18 @@ import {
 	DialogHeader,
 	DialogTitle,
 } from "@/src/components/dialog";
-import {
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuGroup,
-	DropdownMenuItem,
-	DropdownMenuLabel,
-	DropdownMenuTrigger,
-} from "@/src/components/dropdown-menu";
 import { Field, FieldGroup, FieldLabel } from "@/src/components/field";
 import { Input } from "@/src/components/input";
 import { Label } from "@/src/components/label";
-import { Textarea } from "@/src/components/textarea";
+
+import { fooState, setFooState } from "@/src/lib/dialog-states";
 
 export function DropdownMenuDialog() {
-	const [showAddMachineDialog, setShowAddMachineDialog] = useState(false);
+	//const [showAddMachineDialog, setShowAddMachineDialog] = useState(false);
 
 	return (
 		<>
-			<Button onClick={() => setShowAddMachineDialog(true)}>click</Button>
-			<Dialog
-				open={showAddMachineDialog}
-				onOpenChange={setShowAddMachineDialog}
-			>
+			<Dialog open={fooState} onOpenChange={setFooState}>
 				<DialogContent className="sm:max-w-[425px]">
 					<DialogHeader>
 						<DialogTitle>Add Machine</DialogTitle>

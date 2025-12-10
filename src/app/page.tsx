@@ -2,5 +2,10 @@
 import { DropdownMenuDialog } from "@/src/ui/dialog/dialog-build/temp";
 
 export default function Foo() {
-	return <DropdownMenuDialog />;
+	
+
+	return(
+		<DropdownMenuDialog />
+		<Button onClick={() => setFooState(true)}>click</Button>
+	);
 }

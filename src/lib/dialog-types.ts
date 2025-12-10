@@ -1,4 +1,4 @@
-const typeOptions = [
+const typeOptList = [
 	"button",
 	"checkbox",
 	"color",
@@ -22,7 +22,7 @@ const typeOptions = [
 	"week",
 ] as const;
 
-type inputType = (typeof typeOptions)[number];
+type typeOptions = (typeof typeOptList)[number];
 
 type dialogCloseButton = {
 	text: string;
@@ -45,23 +45,18 @@ type baseCloseButton = dialogCloseButton | onClickButton;
 type baseField = {
 	htmlFor: string;
 	id: string;
-	type: inputType;
+	type: typeOptions;
 	placeholder?: string;
 	autoComplete?: string;
 };
 
 type baseDialog = {
+	open: boolean;
+	onOpenChange: (open: boolean) => void;
 	title: string;
 	description: string;
 	fields: Record<string, baseField>;
 	closeButton: "standard" | Record<string, baseCloseButton>;
 };
 
-/*export {
-	usernameField,
-	passwordField,
-	idField,
-	machinePasswordField,
-	ipField,
-	accessLevelField,
-};*/
+export type { baseDialog };
