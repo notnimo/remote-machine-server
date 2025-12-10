@@ -1,44 +1,67 @@
-function foo(ciao: string) {
-	return ciao;
-}
+const typeOptions = [
+	"button",
+	"checkbox",
+	"color",
+	"date",
+	"datetime-local",
+	"email",
+	"file",
+	"hidden",
+	"image",
+	"month",
+	"number",
+	"password",
+	"radio",
+	"range",
+	"reset",
+	"search",
+	"tel",
+	"text",
+	"time",
+	"url",
+	"week",
+] as const;
+
+type inputType = (typeof typeOptions)[number];
+
+type dialogCloseButton = {
+	text: string;
+	variant: "standard" | "outline" | "ghost";
+	type?: "submit";
+	onClick?: never;
+	closeDialogOnClick: true;
+};
+
+type onClickButton = {
+	text: string;
+	variant: "standard" | "outline" | "ghost";
+	type?: "submit";
+	onClick: () => void;
+	closeDialogOnClick?: never;
+};
+
+type baseCloseButton = dialogCloseButton | onClickButton;
+
+type baseField = {
+	htmlFor: string;
+	id: string;
+	type: inputType;
+	placeholder?: string;
+	autoComplete?: string;
+};
 
 type baseDialog = {
 	title: string;
 	description: string;
 	fields: Record<string, baseField>;
-	closeButton: "standard" | object;
+	closeButton: "standard" | Record<string, baseCloseButton>;
 };
 
-type baseField = {
-	htmlFor: string;
-	id: string;
-	name: string;
-	type: any;
-	placeholder?: string;
-	autoComplete?: string;
-};
-
-const usernameField = {
-	func: foo,
-};
-
-const passwordField = {};
-
-const idField = {};
-
-const machinePasswordField = {};
-
-const ipField = {};
-
-const accessLevelField = {};
-
-console.log(usernameField["func"]("cacca"));
-
-export {
+/*export {
 	usernameField,
 	passwordField,
 	idField,
 	machinePasswordField,
 	ipField,
 	accessLevelField,
-};
+};*/
