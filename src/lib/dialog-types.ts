@@ -51,12 +51,10 @@ type baseField = {
 };
 
 type baseDialog = {
-	open: boolean;
-	onOpenChange: (open: boolean) => void;
 	title: string;
 	description: string;
 	fields: Record<string, baseField>;
 	closeButton: "standard" | Record<string, baseCloseButton>;
 };
 
-export type { baseDialog };
+export type { baseDialog, baseField };

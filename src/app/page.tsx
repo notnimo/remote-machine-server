@@ -1,15 +1,27 @@
 "use client";
 
-//import { DropdownMenuDialog } from "@/src/ui/account-mng";
-import { DropdownMenuDialog } from "@/src/ui/dialog/dialog-build/temp";
+import { useState } from "react";
+
 import { Button } from "@/src/components/button";
-import { setFooState } from "@/src/lib/dialog-states";
+
+import { CDialog } from "@/src/ui/dialog/dialog-build/dialog";
 
 export default function Foo() {
+	const [isOpen, setIsOpen] = useState(false);
+
 	return (
 		<div>
-			<DropdownMenuDialog />
-			<Button onClick={() => setFooState(true)}>click</Button>
+			<Button onClick={() => setIsOpen(true)}>click</Button>
+			<CDialog
+				open={isOpen}
+				onOpenChange={setIsOpen}
+				dialogProps={{
+					title: "Hello World",
+					description: "This is a dynamically generated dialog.",
+					fields: {},
+					closeButton: "standard",
+				}}
+			/>
 		</div>
 	);
 }

@@ -1,7 +1,4 @@
 "use client";
-
-import { useState } from "react";
-
 import { Button } from "@/src/components/button";
 import {
 	Dialog,
@@ -16,14 +13,16 @@ import { Field, FieldGroup, FieldLabel } from "@/src/components/field";
 import { Input } from "@/src/components/input";
 import { Label } from "@/src/components/label";
 
-import { fooState, setFooState } from "@/src/lib/dialog-states";
-
-export function DropdownMenuDialog() {
-	//const [showAddMachineDialog, setShowAddMachineDialog] = useState(false);
-
+export function DropdownMenuDialog({
+	open,
+	onOpenChange,
+}: {
+	open: boolean;
+	onOpenChange: (open: boolean) => void;
+}) {
 	return (
 		<>
-			<Dialog open={fooState} onOpenChange={setFooState}>
+			<Dialog open={open} onOpenChange={onOpenChange}>
 				<DialogContent className="sm:max-w-[425px]">
 					<DialogHeader>
 						<DialogTitle>Add Machine</DialogTitle>
