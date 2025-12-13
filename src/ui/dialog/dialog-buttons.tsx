@@ -20,10 +20,7 @@ export function Buttons({
 	buttons: Record<string, baseCloseButton>;
 }) {
 	let temp = <></>;
-	let i = 0;
-	for (const key in buttons) {
-		const button = Object.keys(buttons)[i];
-		i++;
+	for (const button in buttons) {
 		if (buttons[button].closeDialogOnClick) {
 			temp = (
 				<>

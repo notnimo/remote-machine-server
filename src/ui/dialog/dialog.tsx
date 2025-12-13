@@ -15,8 +15,8 @@ import { Input } from "@/src/components/input";
 import { Label } from "@/src/components/label";
 
 import { baseDialog } from "@/src/lib/dialog-types";
-import { Fields } from "@/src/ui/dialog/dialog-build/dialog-fields";
-import { Buttons } from "@/src/ui/dialog/dialog-build/dialog-buttons";
+import { Fields } from "@/src/ui/dialog/dialog-fields";
+import { Buttons } from "@/src/ui/dialog/dialog-buttons";
 
 export function CDialog({
 	open,

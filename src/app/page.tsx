@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { Button } from "@/src/components/button";
 
-import { CDialog } from "@/src/ui/dialog/dialog-build/dialog";
+import { CDialog } from "@/src/ui/dialog/dialog";
 
 export default function Foo() {
 	const [isOpen, setIsOpen] = useState(false);

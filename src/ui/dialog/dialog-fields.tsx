@@ -16,17 +16,12 @@ import { baseField } from "@/src/lib/dialog-types";
 
 export function Fields({ fields }: { fields: Record<string, baseField> }) {
 	let temp = <></>;
-	let i = 0;
-	for (const key in fields) {
-		const field = Object.keys(fields)[i];
-		i++;
+	for (const field in fields) {
 		temp = (
 			<>
 				{temp}
 				<Field>
-					<Label htmlFor={fields[field]["htmlFor"]}>
-						{fields[field].label}
-					</Label>
+					<Label htmlFor={fields[field].htmlFor}>{fields[field].label}</Label>
 					<Input
 						id={fields[field].id}
 						name={fields[field].htmlFor}
