@@ -1,18 +1,7 @@
 import { Button } from "@/src/components/button";
-import {
-	Dialog,
-	DialogClose,
-	DialogContent,
-	DialogDescription,
-	DialogFooter,
-	DialogHeader,
-	DialogTitle,
-} from "@/src/components/dialog";
-import { Field, FieldGroup, FieldLabel } from "@/src/components/field";
-import { Input } from "@/src/components/input";
-import { Label } from "@/src/components/label";
+import { DialogClose } from "@/src/components/dialog";
 
-import { baseCloseButton } from "@/src/lib/dialog-types";
+import { baseCloseButton } from "@/src/ui/dialog/dialog-types";
 
 export function Buttons({
 	buttons,

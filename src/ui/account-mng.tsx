@@ -5,29 +5,20 @@ import { User, LogOut } from "lucide-react";
 
 import { Button } from "@/src/components/button";
 import {
-	Dialog,
-	DialogClose,
-	DialogContent,
-	DialogDescription,
-	DialogFooter,
-	DialogHeader,
-	DialogTitle,
-} from "@/src/components/dialog";
-import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuGroup,
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from "@/src/components/dropdown-menu";
-import { Field, FieldGroup, FieldLabel } from "@/src/components/field";
-import { Input } from "@/src/components/input";
-import { Label } from "@/src/components/label";
-import { Textarea } from "@/src/components/textarea";
 
-export function DropdownMenuDialog() {
+import { CDialog } from "@/src/ui/dialog/dialog";
+
+import { manageAccountDialogProps } from "@/src/lib/dialog/account-mng";
+
+export function AccountMngMenuDialog() {
 	const [showNewDialog, setShowNewDialog] = useState(false);
-	const [logOut, logUserOut] = useState(false);
+	const logUserOut = () => {}; //placeholder
 
 	return (
 		<>
@@ -42,35 +33,17 @@ export function DropdownMenuDialog() {
 						<DropdownMenuItem onSelect={() => setShowNewDialog(true)}>
 							Manage Account
 						</DropdownMenuItem>
-						<DropdownMenuItem onSelect={() => logUserOut(true)}>
+						<DropdownMenuItem onSelect={() => logUserOut()}>
 							<LogOut /> Logout
 						</DropdownMenuItem>
 					</DropdownMenuGroup>
 				</DropdownMenuContent>
 			</DropdownMenu>
-			{/*<Dialog open={showNewDialog} onOpenChange={setShowNewDialog}>
-				<DialogContent className="sm:max-w-[425px]">
-					<DialogHeader>
-						<DialogTitle>Create New File</DialogTitle>
-						<DialogDescription>
-							Provide a name for your new file. Click create when you&apos;re
-							done.
-						</DialogDescription>
-					</DialogHeader>
-					<FieldGroup className="pb-3">
-						<Field>
-							<FieldLabel htmlFor="filename">File Name</FieldLabel>
-							<Input id="filename" name="filename" placeholder="document.txt"/>
-						</Field>
-					</FieldGroup>
-					<DialogFooter>
-						<DialogClose asChild>
-							<Button variant="outline">Cancel</Button>
-						</DialogClose>
-						<Button type="submit">Create</Button>
-					</DialogFooter>
-				</DialogContent>
-			</Dialog>*/}
+			<CDialog
+				open={showNewDialog}
+				onOpenChange={setShowNewDialog}
+				dialogProps={manageAccountDialogProps}
+			/>
 		</>
 	);
 }

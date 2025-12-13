@@ -1,20 +1,16 @@
 "use client";
 
-import { Button } from "@/src/components/button";
 import {
 	Dialog,
-	DialogClose,
 	DialogContent,
 	DialogDescription,
 	DialogFooter,
 	DialogHeader,
 	DialogTitle,
 } from "@/src/components/dialog";
-import { Field, FieldGroup, FieldLabel } from "@/src/components/field";
-import { Input } from "@/src/components/input";
-import { Label } from "@/src/components/label";
+import { FieldGroup } from "@/src/components/field";
 
-import { baseDialog } from "@/src/lib/dialog-types";
+import { baseDialog } from "@/src/ui/dialog/dialog-types";
 import { Fields } from "@/src/ui/dialog/dialog-fields";
 import { Buttons } from "@/src/ui/dialog/dialog-buttons";
 

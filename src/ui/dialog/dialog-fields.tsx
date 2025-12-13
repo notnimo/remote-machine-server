@@ -1,18 +1,8 @@
-import { Button } from "@/src/components/button";
-import {
-	Dialog,
-	DialogClose,
-	DialogContent,
-	DialogDescription,
-	DialogFooter,
-	DialogHeader,
-	DialogTitle,
-} from "@/src/components/dialog";
-import { Field, FieldGroup, FieldLabel } from "@/src/components/field";
+import { Field } from "@/src/components/field";
 import { Input } from "@/src/components/input";
 import { Label } from "@/src/components/label";
 
-import { baseField } from "@/src/lib/dialog-types";
+import { baseField } from "@/src/ui/dialog/dialog-types";
 
 export function Fields({ fields }: { fields: Record<string, baseField> }) {
 	let temp = <></>;
