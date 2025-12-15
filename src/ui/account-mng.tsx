@@ -14,7 +14,7 @@ import {
 
 import { CDialog } from "@/src/ui/dialog/dialog";
 
-import { manageAccountDialogProps } from "@/src/lib/dialog/account-mng";
+import { manageAccountDialog } from "@/src/lib/dialog/account-mng";
 
 export function AccountMngMenuDialog() {
 	const [showNewDialog, setShowNewDialog] = useState(false);
@@ -42,7 +42,7 @@ export function AccountMngMenuDialog() {
 			<CDialog
 				open={showNewDialog}
 				onOpenChange={setShowNewDialog}
-				dialogProps={manageAccountDialogProps}
+				dialogProps={manageAccountDialog}
 			/>
 		</>
 	);

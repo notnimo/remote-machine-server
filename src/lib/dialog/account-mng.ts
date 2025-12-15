@@ -8,7 +8,7 @@ const saveUserChanges = () => {}; //placeholder
 
 const usernameField: baseField = {
 	htmlFor: "username",
-	id: "username",
+	id: "username-field",
 	label: "User ID",
 	type: "email",
 	placeholder: "your-id",
@@ -17,7 +17,7 @@ const usernameField: baseField = {
 
 const passwordField: baseField = {
 	htmlFor: "password",
-	id: "password",
+	id: "password-field",
 	label: "Password",
 	type: "password",
 	placeholder: "••••••••••••••••",
@@ -39,7 +39,7 @@ const cancel: baseCloseButton = {
 	closeDialogOnClick: true,
 };
 
-const manageAccountDialogProps: baseDialog = {
+const manageAccountDialog: baseDialog = {
 	title: "Manage Your Account",
 	description: "Update your account settings",
 	fields: {
@@ -52,4 +52,4 @@ const manageAccountDialogProps: baseDialog = {
 	},
 };
 
-export { manageAccountDialogProps };
+export { manageAccountDialog };

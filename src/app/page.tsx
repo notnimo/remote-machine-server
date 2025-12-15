@@ -1,7 +1,4 @@
-"use client";
-
-import { AccountMngMenuDialog } from "@/src/ui/account-mng";
-
+import { HomeButton } from "@/src/ui/home-btn";
 export default function Page() {
-	return <AccountMngMenuDialog />;
+	return <HomeButton />;
 }
