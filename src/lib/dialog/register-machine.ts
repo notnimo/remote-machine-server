@@ -5,45 +5,45 @@ import {
 	cancel,
 } from "@/src/ui/dialog/dialog-types";
 
-const addMachine = () => {}; //placeholder
+const registerMachine = () => {}; //placeholder
 
 const machineIDField: baseField = {
 	htmlFor: "machine-id",
 	id: "machine-id-field",
-	label: "Machine ID",
+	label: "Create Machine ID",
 	type: "email",
 	placeholder: "a1b2c3d4",
-	autoComplete: true,
+	autoComplete: false,
 };
 
 const machinePasswordField: baseField = {
 	htmlFor: "machine-password",
 	id: "machine-password-field",
-	label: "Machine Password",
+	label: "Create Machine Password",
 	type: "password",
 	placeholder: "••••••••••••••••",
 	autoComplete: false,
 };
 
-const addMachineButton: baseCloseButton = {
-	text: "Add Machine",
+const registerMachineButton: baseCloseButton = {
+	text: "Register Machine",
 	variant: "outline",
 	type: "submit",
-	onClick: addMachine,
+	onClick: registerMachine,
 	closeDialogOnClick: false,
 };
 
-const addMachineDialog: baseDialog = {
-	title: "Add New Machine",
-	description: "Enter the details of the machine you want to add",
+const registerMachineDialog: baseDialog = {
+	title: "Register New Machine",
+	description: "Enter machine details and create credentials",
 	fields: {
 		machineID: machineIDField,
 		machinePassword: machinePasswordField,
 	},
 	closeButton: {
 		cancel: cancel,
-		add: addMachineButton,
+		add: registerMachineButton,
 	},
 };
 
-export { addMachineDialog };
+export { registerMachineDialog };

@@ -54,4 +54,12 @@ type baseDialog = {
 	closeButton: Record<string, baseCloseButton>;
 };
 
+const cancel: baseCloseButton = {
+	text: "Cancel",
+	variant: "ghost",
+	onClick: () => {},
+	closeDialogOnClick: true,
+};
+
 export type { baseDialog, baseField, baseCloseButton };
+export { cancel };

@@ -2,6 +2,7 @@ import {
 	baseDialog,
 	baseField,
 	baseCloseButton,
+	cancel,
 } from "@/src/ui/dialog/dialog-types";
 
 const saveUserChanges = () => {}; //placeholder
@@ -30,13 +31,6 @@ const saveChanges: baseCloseButton = {
 	type: "submit",
 	onClick: saveUserChanges,
 	closeDialogOnClick: false,
-};
-
-const cancel: baseCloseButton = {
-	text: "Cancel",
-	variant: "ghost",
-	onClick: () => {},
-	closeDialogOnClick: true,
 };
 
 const manageAccountDialog: baseDialog = {
