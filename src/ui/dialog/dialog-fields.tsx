@@ -4,9 +4,13 @@ import { Label } from "@/src/components/label";
 
 import { baseField } from "@/src/ui/dialog/dialog-types";
 
+const common = ["email", "password", "text", "number", "tel", "url"];
+
 export function Fields({ fields }: { fields: Record<string, baseField> }) {
 	let temp = <></>;
 	for (const field in fields) {
+		if (false) {
+		}
 		temp = (
 			<>
 				{temp}
