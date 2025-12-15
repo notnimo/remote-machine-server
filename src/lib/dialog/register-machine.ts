@@ -25,6 +25,15 @@ const machinePasswordField: baseField = {
 	autoComplete: false,
 };
 
+const IpField: baseField = {
+	htmlFor: "machineIp",
+	id: "machineIp-field",
+	label: "Machine Local IP Address",
+	type: "email",
+	placeholder: "###.###.###.###",
+	autoComplete: false,
+};
+
 const registerMachineButton: baseCloseButton = {
 	text: "Register Machine",
 	variant: "outline",
@@ -37,6 +46,7 @@ const registerMachineDialog: baseDialog = {
 	title: "Register New Machine",
 	description: "Enter machine details and create credentials",
 	fields: {
+		machineIp: IpField,
 		machineID: machineIDField,
 		machinePassword: machinePasswordField,
 	},

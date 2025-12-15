@@ -14,14 +14,18 @@ export function AddMachine() {
 
 	return (
 		<>
-			<Button onClick={() => setAddMachineOpen(true)} className="text-l">
+			<Button
+				onClick={() => setAddMachineOpen(true)}
+				className="text-l"
+				variant="outline"
+			>
 				<Plus /> Add Machine
 			</Button>
 			<CDialog
 				open={addMachineOpen}
 				onOpenChange={setAddMachineOpen}
 				dialogProps={addMachineDialog}
-			></CDialog>
+			/>
 		</>
 	);
 }
