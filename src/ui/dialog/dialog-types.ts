@@ -15,6 +15,7 @@ const typeOptList = [
 	"range",
 	"reset",
 	"search",
+	"select",
 	"tel",
 	"text",
 	"time",
@@ -38,7 +39,7 @@ type baseCloseButton = {
 	closeDialogOnClick: boolean;
 };
 
-type baseField = {
+type baseFieldStd = {
 	htmlFor: string;
 	id: string;
 	type: typeOptions;
@@ -46,6 +47,18 @@ type baseField = {
 	placeholder?: string;
 	autoComplete?: boolean;
 };
+
+type baseFieldSelect = {
+	htmlFor: string;
+	id: string;
+	type: "select";
+	options: string[];
+	label: string;
+	placeholder?: string;
+	autoComplete?: boolean;
+};
+
+type baseField = baseFieldStd | baseFieldSelect;
 
 type baseDialog = {
 	title: string;
