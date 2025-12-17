@@ -15,7 +15,6 @@ const typeOptList = [
 	"range",
 	"reset",
 	"search",
-	"select",
 	"tel",
 	"text",
 	"time",
@@ -55,6 +54,7 @@ type baseFieldSelect = {
 	options: string[];
 	label: string;
 	placeholder?: string;
+	selectPlaceholder?: string;
 	autoComplete?: boolean;
 };
 
@@ -74,5 +74,5 @@ const cancel: baseCloseButton = {
 	closeDialogOnClick: true,
 };
 
-export type { baseDialog, baseField, baseCloseButton };
+export type { baseDialog, baseField, baseCloseButton, baseFieldSelect };
 export { cancel };

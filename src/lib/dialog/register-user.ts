@@ -3,6 +3,7 @@ import {
 	baseField,
 	baseCloseButton,
 	cancel,
+	baseFieldSelect,
 } from "@/src/ui/dialog/dialog-types";
 
 const registerUser = () => {}; //placeholder
@@ -25,6 +26,16 @@ const userPasswordField: baseField = {
 	autoComplete: false,
 };
 
+const userAccessLevelField: baseFieldSelect = {
+	htmlFor: "access-level",
+	id: "access-level-field",
+	label: "Access Level",
+	type: "select",
+	selectPlaceholder: "Select Access Level",
+	options: ["User", "Supervisor", "Admin"],
+	autoComplete: false,
+};
+
 const registerUserButton: baseCloseButton = {
 	text: "Register User",
 	variant: "outline",
@@ -38,6 +49,7 @@ const registerUserDialog: baseDialog = {
 	description: "Enter user details and create credentials",
 	fields: {
 		username: usernameField,
+		userAccessLevel: userAccessLevelField,
 		userPassword: userPasswordField,
 	},
 	closeButton: {
