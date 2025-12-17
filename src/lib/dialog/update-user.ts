@@ -2,6 +2,7 @@ import {
 	baseDialog,
 	baseField,
 	baseCloseButton,
+	baseFieldSelect,
 	cancel,
 } from "@/src/ui/dialog/dialog-types";
 
@@ -25,6 +26,16 @@ const newUsernameField: baseField = {
 	autoComplete: false,
 };
 
+const newAccessLevelField: baseFieldSelect = {
+	htmlFor: "new-access-level",
+	id: "new-access-level-field",
+	label: "Update Access Level",
+	type: "select",
+	selectPlaceholder: "Select Access Level",
+	options: ["User", "Supervisor", "Admin"],
+	autoComplete: false,
+};
+
 const NewPasswordField: baseField = {
 	htmlFor: "new-user-password",
 	id: "new-user-password-field",
@@ -35,7 +46,7 @@ const NewPasswordField: baseField = {
 };
 
 const updateUserButton: baseCloseButton = {
-	text: "Register User",
+	text: "Update User Credentials",
 	variant: "outline",
 	type: "submit",
 	onClick: updateUser,
@@ -48,6 +59,7 @@ const updateUserDialog: baseDialog = {
 	fields: {
 		currentUsername: currentUsernameField,
 		newUsername: newUsernameField,
+		newAccessLevel: newAccessLevelField,
 		userPassword: NewPasswordField,
 	},
 	closeButton: {

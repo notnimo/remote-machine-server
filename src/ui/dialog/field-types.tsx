@@ -36,7 +36,9 @@ export function SelectField({ field }: { field: baseFieldSelect }) {
 				</SelectTrigger>
 				<SelectContent className="bg-black text-white">
 					{field.options.map((option: any) => (
-						<SelectItem value={option}>{option}</SelectItem>
+						<SelectItem key={option} value={option}>
+							{option}
+						</SelectItem>
 					))}
 				</SelectContent>
 			</Select>
