@@ -14,7 +14,7 @@ import {
 
 import { CDialog } from "@/src/ui/dialog/dialog";
 
-import { manageAccountDialog } from "@/src/lib/dialog/account-mng";
+import { manageAccountDialog } from "@/src/ui/dialog/dialog-types/account-mng";
 
 export function AccountMngMenuDialog() {
 	const [showNewDialog, setShowNewDialog] = useState(false);

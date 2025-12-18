@@ -6,7 +6,7 @@ import { Plus } from "lucide-react";
 
 import { Button } from "@/src/components/button";
 
-import { addMachineDialog } from "@/src/lib/dialog/add-machine";
+import { addMachineDialog } from "@/src/ui/dialog/dialog-types/add-machine";
 import { CDialog } from "@/src/ui/dialog/dialog";
 
 export function AddMachine() {

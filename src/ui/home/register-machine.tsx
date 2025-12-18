@@ -6,7 +6,7 @@ import { LaptopMinimal } from "lucide-react";
 
 import { Button } from "@/src/components/button";
 
-import { registerMachineDialog } from "@/src/lib/dialog/register-machine";
+import { registerMachineDialog } from "@/src/ui/dialog/dialog-types/register-machine";
 import { CDialog } from "@/src/ui/dialog/dialog";
 
 export function RegisterMachine() {

@@ -4,7 +4,7 @@ import {
 	baseCloseButton,
 	cancel,
 	baseFieldSelect,
-} from "@/src/ui/dialog/dialog-types";
+} from "@/src/ui/dialog/dialog-type-define";
 
 const registerUser = () => {}; //placeholder
 

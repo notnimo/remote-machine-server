@@ -6,7 +6,7 @@ import { RefreshCw } from "lucide-react";
 
 import { Button } from "@/src/components/button";
 
-import { updateMachineDialog } from "@/src/lib/dialog/update-machine";
+import { updateMachineDialog } from "@/src/ui/dialog/dialog-types/update-machine";
 import { CDialog } from "@/src/ui/dialog/dialog";
 
 export function UpdateMachine() {

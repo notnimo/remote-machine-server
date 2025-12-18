@@ -6,7 +6,7 @@ import { UserRoundPen } from "lucide-react";
 
 import { Button } from "@/src/components/button";
 
-import { updateUserDialog } from "@/src/lib/dialog/update-user";
+import { updateUserDialog } from "@/src/ui/dialog/dialog-types/update-user";
 import { CDialog } from "@/src/ui/dialog/dialog";
 
 export function UpdateUser() {
