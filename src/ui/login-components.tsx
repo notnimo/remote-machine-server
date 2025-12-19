@@ -2,7 +2,6 @@ import { LogIn } from "lucide-react";
 
 import { Button } from "@/src/components/button";
 import {
-	Card,
 	CardContent,
 	CardDescription,
 	CardFooter,
