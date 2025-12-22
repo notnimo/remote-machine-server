@@ -8,12 +8,12 @@ import {
 	ItemTitle,
 } from "@/src/components/item";
 
-export function ItemDemo() {
+export function MachineCard({ machineID }: { machineID: string }) {
 	return (
 		<div className="flex w-full max-w-md flex-col gap-6">
 			<Item variant="outline" className="min-w-2xl">
 				<ItemContent>
-					<ItemTitle>Machine ID</ItemTitle>
+					<ItemTitle>{machineID}</ItemTitle>
 				</ItemContent>
 				<ItemActions>
 					<Button variant="outline" size="sm">

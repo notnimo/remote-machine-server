@@ -18,8 +18,10 @@ export default function HomePage() {
 	);
 }*/
 
-import { ItemDemo } from "@/src/ui/recent-machines/recent-machine-card";
+import { RecentMenu } from "@/src/ui/recent-machines/recent-machine-menu";
+
+const machines = ["jdbc", "neisnbcei", "lorem", "bdbeeb", "eidbnbe"];
 
 export default function HomePage() {
-	return <ItemDemo />;
+	return <RecentMenu machines={machines} />;
 }
