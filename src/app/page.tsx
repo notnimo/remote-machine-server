@@ -1,6 +1,6 @@
 "use client";
 
-/*import { RegisterMachine } from "@/src/ui/home/register-machine";
+import { RegisterMachine } from "@/src/ui/home/register-machine";
 import { RegisterUser } from "@/src/ui/home/register-user";
 import { UpdateUser } from "@/src/ui/home/update-user";
 import { UpdateMachine } from "@/src/ui/home/update-machine";
@@ -16,12 +16,4 @@ export default function HomePage() {
 			<HomeButton /> <br />
 		</main>
 	);
-}*/
-
-import { RecentMenu } from "@/src/ui/recent-machines/recent-machine-menu";
-
-const machines = ["jdbc", "neisnbcei", "lorem", "bdbeeb", "eidbnbe"];
-
-export default function HomePage() {
-	return <RecentMenu machines={machines} />;
 }
