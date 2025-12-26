@@ -1,28 +1,3 @@
-const fetchMachines = () => {
-	return ["stringify", "deinfie"];
-}; //placeholder
-const recent_machines: string[] = fetchMachines(/*user to be passed*/);
-
-export function RecentMachineSection() {
-	return (
-		<>
-			<hr /> <h1>Recent Machines</h1> <RecentMenu machines={recent_machines} />
-		</>
-	);
-}
-
-export function RecentMenu({ machines }: { machines: string[] }) {
-	let temp;
-	for (let machineID in machines) {
-		temp = (
-			<>
-				{temp} <MachineCard machineID={machines[machineID]} />
-			</>
-		);
-	}
-	return temp;
-}
-
 import { Trash, ScreenShare } from "lucide-react";
 
 import { Button } from "@/src/components/button";
@@ -33,7 +8,9 @@ import {
 	ItemTitle,
 } from "@/src/components/item";
 
-export function MachineCard({ machineID }: { machineID: string }) {
+import { fetchMachines, getUserId } from "@/src/lib/data";
+
+function MachineItem({ machineID }: { machineID: string }) {
 	return (
 		<div className="flex w-full max-w-md flex-col gap-6">
 			<Item variant="outline" className="min-w-2xl">
@@ -51,4 +28,21 @@ export function MachineCard({ machineID }: { machineID: string }) {
 			</Item>
 		</div>
 	);
+}
+
+export function RecentMachineSection({ machines }: { machines: string[] }) {
+	const recent_machines: string[] = fetchMachines(getUserId());
+	let temp = (
+		<>
+			<hr /> <h1>Recent Machines</h1>
+		</>
+	);
+	for (let machineID in machines) {
+		temp = (
+			<>
+				{temp} <MachineItem machineID={machines[machineID]} />
+			</>
+		);
+	}
+	return temp;
 }
