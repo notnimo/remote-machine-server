@@ -6,7 +6,8 @@ import { RecentMachineSectionSkeletons } from "@/src/ui/recent-machine/recent-ma
 export function RecentMachineWrap() {
 	return (
 		<>
-			<hr /> <h1>Recent Machines</h1>
+			<hr className="h-1 my-8 bg-neutral-quaternary border min-w-2xl rounded-sm " />
+			<h1>Recent Machines</h1> <br />
 			<Suspense fallback={RecentMachineSectionSkeletons()}>
 				<RecentMachineSection />
 			</Suspense>
