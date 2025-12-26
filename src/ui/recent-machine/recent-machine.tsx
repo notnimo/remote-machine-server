@@ -30,17 +30,13 @@ function MachineItem({ machineID }: { machineID: string }) {
 	);
 }
 
-export function RecentMachineSection({ machines }: { machines: string[] }) {
+export function RecentMachineSection() {
 	const recent_machines: string[] = fetchMachines(getUserId());
-	let temp = (
-		<>
-			<hr /> <h1>Recent Machines</h1>
-		</>
-	);
-	for (let machineID in machines) {
+	let temp;
+	for (let machineID in recent_machines) {
 		temp = (
 			<>
-				{temp} <MachineItem machineID={machines[machineID]} />
+				{temp} <MachineItem machineID={recent_machines[machineID]} />
 			</>
 		);
 	}
