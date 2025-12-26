@@ -36,7 +36,7 @@ export function RecentMachineSection() {
 	for (let machineID in recent_machines) {
 		temp = (
 			<>
-				{temp} <MachineItem machineID={recent_machines[machineID]} />
+				{temp} <MachineItem machineID={recent_machines[machineID]} /> <br />
 			</>
 		);
 	}

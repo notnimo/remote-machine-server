@@ -34,9 +34,9 @@ function RecentMachineSectionSkeleton() {
 export function RecentMachineSectionSkeletons() {
 	return (
 		<>
-			<RecentMachineSectionSkeleton />
-			<RecentMachineSectionSkeleton />
-			<RecentMachineSectionSkeleton />
+			<RecentMachineSectionSkeleton /> <br />
+			<RecentMachineSectionSkeleton /> <br />
+			<RecentMachineSectionSkeleton /> <br />
 			<RecentMachineSectionSkeleton />
 		</>
 	);
