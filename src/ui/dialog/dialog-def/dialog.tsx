@@ -10,9 +10,9 @@ import {
 } from "@/src/components/dialog";
 import { FieldGroup } from "@/src/components/field";
 
-import { baseDialog } from "@/src/ui/dialog/dialog-type-define";
-import { Fields } from "@/src/ui/dialog/dialog-fields";
-import { Buttons } from "@/src/ui/dialog/dialog-buttons";
+import { baseDialog } from "@/src/ui/dialog/dialog-def/dialog-type-define";
+import { Fields } from "@/src/ui/dialog/dialog-def/dialog-fields";
+import { Buttons } from "@/src/ui/dialog/dialog-def/dialog-buttons";
 
 export function CDialog({
 	open,

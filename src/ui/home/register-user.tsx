@@ -7,7 +7,7 @@ import { UserRoundPlus } from "lucide-react";
 import { Button } from "@/src/components/button";
 
 import { registerUserDialog } from "@/src/ui/dialog/dialog-types/register-user";
-import { CDialog } from "@/src/ui/dialog/dialog";
+import { CDialog } from "@/src/ui/dialog/dialog-def/dialog";
 
 export function RegisterUser() {
 	const [registerUserOpen, setRegisterUserOpen] = useState(false);

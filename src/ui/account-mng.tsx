@@ -12,7 +12,7 @@ import {
 	DropdownMenuTrigger,
 } from "@/src/components/dropdown-menu";
 
-import { CDialog } from "@/src/ui/dialog/dialog";
+import { CDialog } from "@/src/ui/dialog/dialog-def/dialog";
 
 import { manageAccountDialog } from "@/src/ui/dialog/dialog-types/account-mng";
 

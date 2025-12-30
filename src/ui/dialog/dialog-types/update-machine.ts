@@ -3,7 +3,7 @@ import {
 	baseField,
 	baseCloseButton,
 	cancel,
-} from "@/src/ui/dialog/dialog-type-define";
+} from "@/src/ui/dialog/dialog-def/dialog-type-define";
 
 const updateMachine = () => {}; //placeholder
 
