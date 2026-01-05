@@ -2,12 +2,7 @@ import { Trash, ScreenShare } from "lucide-react";
 
 import { Skeleton } from "@/src/components/skeleton";
 import { Button } from "@/src/components/button";
-import {
-	Item,
-	ItemActions,
-	ItemContent,
-	ItemTitle,
-} from "@/src/components/item";
+import { Item, ItemActions, ItemContent } from "@/src/components/item";
 
 function RecentMachineSectionSkeleton() {
 	return (

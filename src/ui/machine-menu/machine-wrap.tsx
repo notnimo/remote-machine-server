@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 
-import { RecentMachineSection } from "@/src/ui/recent-machine/recent-machine";
-import { RecentMachineSectionSkeletons } from "@/src/ui/recent-machine/recent-machine-skeletons";
+import { RecentMachineSection } from "@/src/ui/machine-menu/machine-card";
+import { RecentMachineSectionSkeletons } from "@/src/ui/machine-menu/machine-skeletons";
 
 export function RecentMachineWrap() {
 	return (
