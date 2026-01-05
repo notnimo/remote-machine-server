@@ -31,7 +31,7 @@ function MachineItem({ machineID }: { machineID: string }) {
 }
 
 export function RecentMachineSection() {
-	const recent_machines: string[] = fetchMachines(getUserId());
+	const recent_machines: string[] = fetchMachines(getUserId()); //generalize
 	let temp;
 	for (let machineID in recent_machines) {
 		temp = (

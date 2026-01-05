@@ -4,7 +4,7 @@ import { Skeleton } from "@/src/components/skeleton";
 import { Button } from "@/src/components/button";
 import { Item, ItemActions, ItemContent } from "@/src/components/item";
 
-function RecentMachineSectionSkeleton() {
+function MachineSectionSkeleton() {
 	return (
 		<>
 			<div className="flex w-full max-w-md flex-col gap-6">
@@ -26,13 +26,13 @@ function RecentMachineSectionSkeleton() {
 	);
 }
 
-export function RecentMachineSectionSkeletons() {
+export function MachineSectionSkeletons() {
 	return (
 		<>
-			<RecentMachineSectionSkeleton /> <br />
-			<RecentMachineSectionSkeleton /> <br />
-			<RecentMachineSectionSkeleton /> <br />
-			<RecentMachineSectionSkeleton />
+			<MachineSectionSkeleton /> <br />
+			<MachineSectionSkeleton /> <br />
+			<MachineSectionSkeleton /> <br />
+			<MachineSectionSkeleton />
 		</>
 	);
 }
