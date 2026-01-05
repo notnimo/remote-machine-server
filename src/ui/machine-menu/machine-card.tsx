@@ -8,7 +8,7 @@ import {
 	ItemTitle,
 } from "@/src/components/item";
 
-import { fetchMachines, getUserId } from "@/src/lib/data";
+import { getUserId } from "@/src/lib/data";
 
 function MachineItem({ machineID }: { machineID: string }) {
 	return (
@@ -30,8 +30,12 @@ function MachineItem({ machineID }: { machineID: string }) {
 	);
 }
 
-export function RecentMachineSection() {
-	const recent_machines: string[] = fetchMachines(getUserId()); //generalize
+export function MachineSection({
+	fetchMachines,
+}: {
+	fetchMachines: (userId: string) => string[];
+}) {
+	const recent_machines: string[] = fetchMachines(getUserId());
 	let temp;
 	for (let machineID in recent_machines) {
 		temp = (
