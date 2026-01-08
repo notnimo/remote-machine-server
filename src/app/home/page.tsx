@@ -19,7 +19,7 @@ export default function Page() {
 				</div>
 				<br />
 				<br />
-				<div className="w-1.5 h-150 inline-block bg-neutral-quaternary border-3 rounded-sm"></div>
+				<div className="w-1 h-150 inline-block bg-neutral-quaternary border-3 rounded-sm "></div>
 			</div>
 		</div>
 	);
