@@ -5,7 +5,7 @@ import {
 	cancel,
 } from "@/src/ui/dialog/dialog-def/dialog-type-define";
 
-const addMachine = () => {}; //placeholder
+import { addMachine } from "@/src/lib/data";
 
 const machineIDField: baseField = {
 	htmlFor: "machine-id",

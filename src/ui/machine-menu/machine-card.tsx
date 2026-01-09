@@ -13,7 +13,7 @@ import { getUserId } from "@/src/lib/data";
 function MachineItem({ machineID }: { machineID: string }) {
 	return (
 		<div className="flex w-full max-w-md flex-col gap-6">
-			<Item variant="outline" className="min-w-2xl">
+			<Item variant="outline" className="min-w-lg">
 				<ItemContent>
 					<ItemTitle>{machineID}</ItemTitle>
 				</ItemContent>

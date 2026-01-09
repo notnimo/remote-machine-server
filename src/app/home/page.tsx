@@ -1,10 +1,15 @@
 "use client";
 
+import { Suspense } from "react";
+
 import { AddMachine } from "@/src/ui/home/add-machine";
 import { RegisterMachine } from "@/src/ui/home/register-machine";
 import { UpdateMachine } from "@/src/ui/home/update-machine";
 import { RegisterUser } from "@/src/ui/home/register-user";
 import { UpdateUser } from "@/src/ui/home/update-user";
+import { MachineSection } from "@/src/ui/machine-menu/machine-card";
+import { MachineSectionSkeletons } from "@/src/ui/machine-menu/machine-skeletons";
+import { fetchMachines, fetchRecent } from "@/src/lib/data";
 
 export default function Page() {
 	return (
@@ -19,7 +24,22 @@ export default function Page() {
 				</div>
 				<br />
 				<br />
-				<div className="w-1 h-150 inline-block bg-neutral-quaternary border-3 rounded-sm "></div>
+				<div className="flex flex-row justify-around">
+					<div>
+						<h1>Your Machines</h1>
+						<br /> <br />
+						<Suspense fallback={<MachineSectionSkeletons />}>
+							<MachineSection fetchMachines={fetchMachines} />
+						</Suspense>
+					</div>
+					<div>
+						<h1>Recent Machines</h1>
+						<br /> <br />
+						<Suspense fallback={<MachineSectionSkeletons />}>
+							<MachineSection fetchMachines={fetchRecent} />
+						</Suspense>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
