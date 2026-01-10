@@ -9,6 +9,7 @@ import { RegisterUser } from "@/src/ui/home/register-user";
 import { UpdateUser } from "@/src/ui/home/update-user";
 import { MachineSection } from "@/src/ui/machine-menu/machine-card";
 import { MachineSectionSkeletons } from "@/src/ui/machine-menu/machine-skeletons";
+
 import { fetchMachines, fetchRecent } from "@/src/lib/data";
 
 export default function Page() {

@@ -21,20 +21,23 @@ const typeOptList = [
 	"url",
 	"week",
 ] as const;
-
 type typeOptions = (typeof typeOptList)[number];
+
+const variantOptList = [
+	"link",
+	"default",
+	"destructive",
+	"outline",
+	"secondary",
+	"ghost",
+];
+type variantOptions = (typeof variantOptList)[number];
 
 type baseCloseButton = {
 	text: string;
-	variant:
-		| "link"
-		| "default"
-		| "destructive"
-		| "outline"
-		| "secondary"
-		| "ghost";
+	variant: variantOptions;
 	type?: "submit";
-	onClick?: () => void;
+	onClick?: (args: any[]) => any;
 	closeDialogOnClick: boolean;
 };
 
@@ -70,7 +73,6 @@ type baseDialog = {
 const cancel: baseCloseButton = {
 	text: "Cancel",
 	variant: "ghost",
-	onClick: () => {},
 	closeDialogOnClick: true,
 };
 
