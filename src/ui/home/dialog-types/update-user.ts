@@ -4,9 +4,8 @@ import {
 	baseCloseButton,
 	baseFieldSelect,
 	cancel,
-} from "@/src/ui/dialog/dialog-def/dialog-type-define";
-
-const updateUser = () => {}; //placeholder
+} from "@/src/ui/dialog/dialog-type-define";
+import { updateUser } from "@/src/lib/placeholder";
 
 const currentUsernameField: baseField = {
 	htmlFor: "current-username",

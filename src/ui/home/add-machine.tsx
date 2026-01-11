@@ -7,7 +7,7 @@ import { Plus } from "lucide-react";
 import { Button } from "@/src/components/button";
 
 import { addMachineDialog } from "@/src/ui/home/dialog-types/add-machine";
-import { CDialog } from "@/src/ui/dialog/dialog-def/dialog";
+import { CDialog } from "@/src/ui/dialog/dialog";
 
 export function AddMachine() {
 	const [addMachineOpen, setAddMachineOpen] = useState(false);

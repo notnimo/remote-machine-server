@@ -3,8 +3,7 @@ import {
 	baseField,
 	baseCloseButton,
 	cancel,
-} from "@/src/ui/dialog/dialog-def/dialog-type-define";
-
+} from "@/src/ui/dialog/dialog-type-define";
 import { addMachine } from "@/src/lib/placeholder";
 
 const machineIDField: baseField = {

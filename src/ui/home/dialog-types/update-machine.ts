@@ -3,9 +3,8 @@ import {
 	baseField,
 	baseCloseButton,
 	cancel,
-} from "@/src/ui/dialog/dialog-def/dialog-type-define";
-
-const updateMachine = () => {}; //placeholder
+} from "@/src/ui/dialog/dialog-type-define";
+import { updateMachine } from "@/src/lib/placeholder";
 
 const currentMachineIDField: baseField = {
 	htmlFor: "current-machine-id",

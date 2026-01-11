@@ -48,6 +48,10 @@ const updateUser = (userId: string, newDetails: any): boolean => {
 	return true;
 };
 
+const logUserOut = (): boolean => {
+	return true;
+};
+
 export {
 	getUserId,
 	fetchMachines,
@@ -59,4 +63,5 @@ export {
 	registerMachine,
 	registerUser,
 	updateUser,
+	logUserOut,
 };

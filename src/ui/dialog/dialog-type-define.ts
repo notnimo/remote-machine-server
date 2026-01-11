@@ -38,7 +38,7 @@ type baseCloseButton = {
 	text: string;
 	variant: variantOptions;
 	type?: "submit";
-	onClick?: (args: any) => any;
+	onClick?: any; // to narrow dawn to a general event handler without problems
 	closeDialogOnClick: boolean;
 };
 
