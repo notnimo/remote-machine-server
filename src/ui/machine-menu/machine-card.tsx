@@ -8,7 +8,7 @@ import {
 	ItemTitle,
 } from "@/src/components/item";
 
-import { getUserId } from "@/src/lib/data";
+import { getUserId } from "@/src/lib/placeholder";
 
 function MachineItem({ machineID }: { machineID: string }) {
 	return (

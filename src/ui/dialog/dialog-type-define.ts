@@ -31,14 +31,14 @@ const variantOptList = [
 	"outline",
 	"secondary",
 	"ghost",
-];
+] as const;
 type variantOptions = (typeof variantOptList)[number];
 
 type baseCloseButton = {
 	text: string;
 	variant: variantOptions;
 	type?: "submit";
-	onClick?: (args: any[]) => any;
+	onClick?: (args: any) => any;
 	closeDialogOnClick: boolean;
 };
 
