@@ -15,6 +15,7 @@ const typeOptList = [
 	"range",
 	"reset",
 	"search",
+	"select",
 	"tel",
 	"text",
 	"time",
@@ -49,18 +50,11 @@ type baseFieldStd = {
 	placeholder?: string;
 	autoComplete?: boolean;
 };
-
-type baseFieldSelect = {
-	htmlFor: string;
-	id: string;
+interface baseFieldSelect extends baseFieldStd {
 	type: "select";
 	options: string[];
-	label: string;
-	placeholder?: string;
 	selectPlaceholder?: string;
-	autoComplete?: boolean;
-};
-
+}
 type baseField = baseFieldStd | baseFieldSelect;
 
 type baseDialog = {

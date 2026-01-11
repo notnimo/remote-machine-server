@@ -54,8 +54,8 @@ const updateUserButton: baseCloseButton = {
 };
 
 const updateUserDialog: baseDialog = {
-	title: "Register New User",
-	description: "Enter user details and create credentials",
+	title: "Update User Details",
+	description: "Enter user id and update user details",
 	fields: {
 		currentUsername: currentUsernameField,
 		newUsername: newUsernameField,
