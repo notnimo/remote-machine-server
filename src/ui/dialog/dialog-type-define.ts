@@ -55,7 +55,7 @@ interface baseFieldSelect extends baseFieldStd {
 	options: string[];
 	selectPlaceholder?: string;
 }
-type baseField = baseFieldStd | baseFieldSelect;
+type baseField = baseFieldStd & baseFieldSelect;
 
 type baseDialog = {
 	title: string;
