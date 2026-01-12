@@ -67,5 +67,3 @@ export default function Page() {
 		</main>
 	);
 }
-
-// add your machines

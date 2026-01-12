@@ -14,7 +14,7 @@ import {
 
 import { CDialog } from "@/src/ui/dialog/dialog";
 
-import { manageAccountDialog } from "@/src/ui/account_mng/account-mng.ts";
+import { manageAccountDialog } from "@/src/ui/account-mng/account-mng.ts";
 import { logUserOut } from "@/src/lib/placeholder";
 
 export function AccountMngMenu() {
