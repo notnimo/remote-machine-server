@@ -25,7 +25,7 @@ const userPasswordField: baseField = {
 	autoComplete: false,
 };
 
-const userAccessLevelField: baseFieldSelect = {
+const userAccessLevelField: baseField = {
 	htmlFor: "access-level",
 	id: "access-level-field",
 	label: "Access Level",
