@@ -17,7 +17,7 @@ export default function HomePage() {
 			<UpdateMachine /> <br />
 			<HomeButton /> <br />
 			<p>
-				<Link href={`/1a2b3c/machine-page`}>Dio Cane</Link>
+				<Link href={`/1a2b3c/machine-page/file-transfer`}>Dio Cane</Link>
 			</p>
 		</main>
 	);

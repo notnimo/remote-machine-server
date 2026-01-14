@@ -8,14 +8,12 @@ import "@/src/app/global.css";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
-		<html lang="en">
-			<body className={`${ubuntu.className} antialiased`}>
-				<div className="flex flex-row justify-between p-3.5 max-h-120px">
-					<HomeButton />
-					<AccountMngMenu />
-				</div>
-				{children}
-			</body>
-		</html>
+		<div>
+			<div className="flex flex-row justify-between p-3.5 max-h-120px">
+				<HomeButton />
+				<AccountMngMenu />
+			</div>
+			{children}
+		</div>
 	);
 }
