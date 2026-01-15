@@ -1,4 +1,4 @@
-import { Trash, ScreenShare } from "lucide-react";
+import { Trash, ScreenShare, Link } from "lucide-react";
 
 import { Button } from "@/src/components/button";
 import {
@@ -8,7 +8,11 @@ import {
 	ItemTitle,
 } from "@/src/components/item";
 
-import { getUserId } from "@/src/lib/placeholder";
+import {
+	getUserId,
+	deleteMachine,
+	connectMachine,
+} from "@/src/lib/placeholder";
 
 function MachineItem({ machineID }: { machineID: string }) {
 	return (
@@ -18,10 +22,18 @@ function MachineItem({ machineID }: { machineID: string }) {
 					<ItemTitle>{machineID}</ItemTitle>
 				</ItemContent>
 				<ItemActions>
-					<Button variant="outline" size="sm">
+					<Button
+						variant="outline"
+						size="sm"
+						onClick={() => deleteMachine(machineID, getUserId())}
+					>
 						<Trash />
 					</Button>
-					<Button variant="outline" size="sm">
+					<Button
+						variant="outline"
+						size="sm"
+						onClick={() => connectMachine(machineID, getUserId())}
+					>
 						<ScreenShare />
 					</Button>
 				</ItemActions>

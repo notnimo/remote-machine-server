@@ -3,7 +3,6 @@ import {
 	baseField,
 	baseCloseButton,
 	cancel,
-	baseFieldSelect,
 } from "@/src/ui/dialog/dialog-type-define";
 import { registerUser } from "@/src/lib/placeholder";
 

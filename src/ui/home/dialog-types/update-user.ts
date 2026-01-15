@@ -2,7 +2,6 @@ import {
 	baseDialog,
 	baseField,
 	baseCloseButton,
-	baseFieldSelect,
 	cancel,
 } from "@/src/ui/dialog/dialog-type-define";
 import { updateUser } from "@/src/lib/placeholder";
@@ -25,7 +24,7 @@ const newUsernameField: baseField = {
 	autoComplete: false,
 };
 
-const newAccessLevelField: baseFieldSelect = {
+const newAccessLevelField: baseField = {
 	htmlFor: "new-access-level",
 	id: "new-access-level-field",
 	label: "Update Access Level",
