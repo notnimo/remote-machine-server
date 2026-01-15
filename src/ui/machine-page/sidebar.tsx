@@ -1,25 +1,39 @@
-import Link from "next/link";
+import { MonitorOff } from "lucide-react";
 
-import { Plus, MonitorOff } from "lucide-react";
+import { Button } from "@/src/components/button";
 
 import { NavLinks } from "@/src/ui/machine-page/nav-links";
 
 export function SideBar() {
-	return (
-		<div className="flex h-full flex-col px-3 py-4 md:px-2 max-w-md">
-			<div className="w-32 text-white md:w-40">
-				<Plus />
+	/*return (
+		<div className="flex min-h-full flex-col px-3 py-4 md:px-2 max-w-md bg-secondary-foreground">
+			<div className="w-32 text-white md:w-40 bg-accent rounded-md">
+				something
 			</div>
 			<div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
-				<div className="hidden h-auto w-full grow rounded-md md:block">
+				<div className="hidden h-auto w-full grow rounded-md md:block bg-accent">
 					<NavLinks />
 				</div>
-				<form>
-					<button className="flex h-12 w-full grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium md:flex-none md:justify-start md:p-2 md:px-3">
+				<div>
+					<Button variant="ghost">
 						<MonitorOff className="w-6" />
 						<div className="hidden md:block">End Connection</div>
-					</button>
-				</form>
+					</Button>
+				</div>
+			</div>
+		</div>
+	);*/
+	return (
+		<div className="dark:hover:bg-accent/75 max-w-100">
+			<div>Browse, transfer files and program routines</div>
+			<div>
+				<NavLinks />
+			</div>
+			<div>
+				<Button variant="ghost">
+					<MonitorOff />
+					End Connection
+				</Button>
 			</div>
 		</div>
 	);
