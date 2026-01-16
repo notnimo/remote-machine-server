@@ -24,7 +24,7 @@ export function SideBar() {
 		</div>
 	);*/
 	return (
-		<div className="dark:hover:bg-accent/75 max-w-100">
+		<div className="bg-accent/75 max-w-100 rounded-2xl">
 			<div>Browse, transfer files and program routines</div>
 			<div>
 				<NavLinks />

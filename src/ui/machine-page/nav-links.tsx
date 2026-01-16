@@ -1,3 +1,9 @@
 export function NavLinks() {
-	return <div>Nav Links</div>;
+	return (
+		<div>
+			<div>Terminal</div>
+			<div>Routine Scheduler</div>
+			<div>File Transfer</div>
+		</div>
+	);
 }
