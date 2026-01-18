@@ -1,7 +1,13 @@
 import type { ReactNode } from "react";
 
+import { SideBar } from "@/src/ui/machine-page/sidebar";
 import "../../../global.css";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-	return <div>{children}</div>;
+	return (
+		<div className="flex h-full">
+			<SideBar />
+			{children}
+		</div>
+	);
 }

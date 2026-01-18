@@ -20,7 +20,7 @@ import { SideBar } from "@/src/ui/machine-page/sidebar";
 				<UpdateMachine /> <br />
 				<HomeButton /> <br />
 				<p>
-					<Link href={`/1a2b3c/machine-page/file-transfer`}>Link</Link>
+					<Link href={`/1a2b3c/machine-page/terminal`}>Link</Link>
 				</p>
 			</div>
 		</main>
