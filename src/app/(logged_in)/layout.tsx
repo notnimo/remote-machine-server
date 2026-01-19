@@ -6,8 +6,8 @@ import "@/src/app/global.css";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
-		<div>
-			<div className="flex flex-row justify-between p-3.5 max-h-120px">
+		<div className="flex flex-col h-screen w-full">
+			<div className="flex flex-row justify-between p-2 h-[7vh]">
 				<HomeButton />
 				<AccountMngMenu />
 			</div>

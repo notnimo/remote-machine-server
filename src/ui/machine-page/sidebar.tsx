@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Frame, MonitorOff } from "lucide-react";
+import { MonitorOff } from "lucide-react";
 
 import { Button } from "@/src/components/button";
 
@@ -8,17 +8,12 @@ import { Logo } from "@/src/ui/logo";
 
 export function SideBar() {
 	return (
-		<div className="flex h-screen flex-col py-4 px-2 max-w-min">
-			{" "}
-			{/* ensure a definite height */}
-			<Link
-				className="mb-2 flex items-end justify-start rounded-md bg-primary p-4 h-40"
-				href="/"
-			>
+		<div className="flex h-[93vh] flex-col py-2 px-2 max-w-min">
+			<div className="mb-2 flex items-end justify-start rounded-md bg-primary p-4 h-40">
 				<div className="text-white w-40">
 					<Logo />
 				</div>
-			</Link>
+			</div>
 			<div className="flex flex-col flex-1 min-h-0 space-y-2">
 				<NavLinks />
 

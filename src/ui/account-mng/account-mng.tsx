@@ -24,7 +24,7 @@ export function AccountMngMenu() {
 		<>
 			<DropdownMenu modal={false}>
 				<DropdownMenuTrigger asChild>
-					<Button variant="outline" aria-label="Open menu" size="icon">
+					<Button variant="outline" aria-label="Open menu" size="icon-lg">
 						<User />
 					</Button>
 				</DropdownMenuTrigger>
