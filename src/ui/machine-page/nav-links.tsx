@@ -21,7 +21,7 @@ export function NavLinks() {
 		},
 		{
 			name: "Program Routines",
-			href: `${basePathname()}/program-routines`,
+			href: `${basePathname()}/program-routine`,
 			icon: Clock,
 		},
 	];
