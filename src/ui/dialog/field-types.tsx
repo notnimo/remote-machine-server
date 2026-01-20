@@ -9,7 +9,7 @@ import {
 	SelectValue,
 } from "@/src/components/select";
 
-import { baseField, baseFieldSelect } from "@/src/ui/dialog/dialog-type-define";
+import { baseField, baseFieldSelect } from "@/src/lib/dialog-type-define";
 
 export function CommonField({ field }: { field: baseField }) {
 	return (

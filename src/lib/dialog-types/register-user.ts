@@ -3,7 +3,7 @@ import {
 	baseField,
 	baseCloseButton,
 	cancel,
-} from "@/src/ui/dialog/dialog-type-define";
+} from "@/src/lib/dialog-type-define";
 import { registerUser } from "@/src/lib/placeholder";
 
 const usernameField: baseField = {

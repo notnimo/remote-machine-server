@@ -1,7 +1,7 @@
 import { Button } from "@/src/components/button";
 import { DialogClose } from "@/src/components/dialog";
 
-import { baseCloseButton } from "@/src/ui/dialog/dialog-type-define";
+import { baseCloseButton } from "@/src/lib/dialog-type-define";
 
 export function Buttons({
 	buttons,
