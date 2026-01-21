@@ -5,8 +5,10 @@ const common = ["email", "password", "text", "number", "tel", "url"];
 
 export function Fields({ fields }: { fields: Record<string, baseField> }) {
 	let temp = <></>;
+
 	for (const field in fields) {
-		if (fields === null || common.includes(fields[field].type)) {
+		if (fields === null) return "Error: No fields defined";
+		if (common.includes(fields[field].type)) {
 			temp = (
 				<>
 					{temp}
