@@ -2,23 +2,14 @@ import { TypeAnimation } from "react-type-animation";
 
 export function TextTyping({ toType }: { toType: string[] }) {
 	return (
-		<div
-			style={{
-				backgroundColor: "#000",
-				color: "#0f0",
-				fontFamily: "monospace",
-				padding: "20px",
-				borderRadius: "8px",
-				width: "fit-content",
-			}}
-		>
+		<div className="p-5 w-fit">
 			<TypeAnimation
 				sequence={toType}
-				wrapper="span"
+				wrapper="div"
 				cursor={true}
-				repeat={2}
-				speed={75} // typing speed in ms per character
-				deletionSpeed={30} // speed for deleting text
+				repeat={1}
+				speed={75}
+				style={{ fontSize: "2rem", fontWeight: "bold" }}
 			/>
 		</div>
 	);

@@ -12,11 +12,14 @@ import { Input } from "@/src/components/input";
 import { Label } from "@/src/components/label";
 
 export function LoginHeaderGroup() {
+	const loginTitle: string = "Login to your account";
+	const loginDescription: string =
+		"Enter your username below to login to your account";
 	return (
 		<CardHeader>
-			<CardTitle className="text-white">Login to your account</CardTitle>
+			<CardTitle className="text-white">{loginTitle}</CardTitle>
 			<CardDescription className="text-white">
-				Enter your username below to login to your account
+				{loginDescription}
 			</CardDescription>
 		</CardHeader>
 	);
