@@ -1,4 +1,6 @@
-// placeholders functions
+// placeholders
+
+type Routine = {};
 
 const fetchRecent = (userId: string): string[] => {
 	return ["machine_1", "machine_2", "machine_3"];
@@ -23,7 +25,7 @@ const connectMachine = (machineId: string, userId: string): boolean => {
 const addMachine = (
 	machineId: string,
 	machinePassword: string,
-	userId: string
+	userId: string,
 ): boolean => {
 	return true;
 };
@@ -31,7 +33,7 @@ const addMachine = (
 const updateMachine = (
 	machineId: string,
 	newDetails: any,
-	userId: string
+	userId: string,
 ): boolean => {
 	return true;
 };
@@ -52,6 +54,10 @@ const logUserOut = (): boolean => {
 	return true;
 };
 
+const programRoutine = (routine: Routine, userId: string): boolean => {
+	return true;
+};
+
 export {
 	getUserId,
 	fetchMachines,
@@ -64,4 +70,5 @@ export {
 	registerUser,
 	updateUser,
 	logUserOut,
+	programRoutine,
 };

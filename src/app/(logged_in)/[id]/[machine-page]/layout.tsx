@@ -5,7 +5,7 @@ import "../../../global.css";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
-		<div className="flex h-full">
+		<div className="flex flex-row h-full">
 			<SideBar />
 			{children}
 		</div>

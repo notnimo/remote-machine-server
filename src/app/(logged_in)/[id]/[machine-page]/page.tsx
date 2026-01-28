@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 export default function Main() {
-	return <div>Hello word</div>;
+	notFound();
 }
