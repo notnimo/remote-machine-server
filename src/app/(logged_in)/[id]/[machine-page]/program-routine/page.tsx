@@ -1,12 +1,11 @@
 "use client";
 
-import Link from "next/link";
-
-import { ArrowRight, Github } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/src/components/button";
 
 import { TextTyping } from "@/src/ui/text-writing";
+import { DatePickerTime } from "@/src/ui/machine-page/program-routine/date-time-picker";
 import { getUserId, programRoutine } from "@/src/lib/placeholder";
 
 export default function ProgramRoutinePage() {
@@ -20,7 +19,9 @@ export default function ProgramRoutinePage() {
 				</div>
 			</div>
 			<div className="min-h-[2vh]"></div>
-			<div className="grow"></div>
+			<div className="grow">
+				<DatePickerTime />
+			</div>
 			<div className="min-h-[2vh]"></div>
 			<div className="flex justify-center min-h-[45vh]">
 				<div>
