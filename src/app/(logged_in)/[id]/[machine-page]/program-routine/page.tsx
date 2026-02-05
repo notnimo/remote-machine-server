@@ -19,11 +19,11 @@ export default function ProgramRoutinePage() {
 				</div>
 			</div>
 			<div className="min-h-[2vh]"></div>
-			<div className="grow">
+			<div className="h-auto">
 				<DatePickerTime />
 			</div>
 			<div className="min-h-[2vh]"></div>
-			<div className="flex justify-center min-h-[45vh]">
+			<div className="flex justify-center grow">
 				<div>
 					<Button
 						className="bg-primary-foreground hover:bg-gray-200 text-black flex items-center flex-row justify-between"
