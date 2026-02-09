@@ -1,31 +1,36 @@
 "use client";
 
+import { JSX } from "react";
+
 import { useState } from "react";
 import Terminal, { ColorMode, TerminalOutput } from "react-terminal-ui";
 
-const TerminalController = ({
-	welcomeMsg,
+export function TerminalController({
 	title,
 	actOnInput,
 }: {
-	welcomeMsg: string;
 	title: string;
-	actOnInput: (input: string) => void;
-}) => {
-	const [terminalLineData, setTerminalLineData] = useState([
-		<TerminalOutput>{welcomeMsg}</TerminalOutput>,
-	]);
+	actOnInput: (input: string, getTerminalLineData: () => string) => void;
+}) {
+	const [terminalLineData, setTerminalLineData] = useState([""]);
+
+	const getTerminalLineData = () => {
+		return terminalLineData[0];
+	};
 
 	return (
-		<Terminal
-			name={title}
-			colorMode={ColorMode.Dark}
-			onInput={(terminalInput) => actOnInput(terminalInput)}
-			TopButtonsPanel={() => null}
-			startingInputValue="C/Users/Admin/Desktop $"
-		>
-			{terminalLineData}
-		</Terminal>
+		<div className="container">
+			<Terminal
+				name={title}
+				colorMode={ColorMode.Dark}
+				onInput={(terminalInput) =>
+					actOnInput(terminalInput, getTerminalLineData)
+				}
+				TopButtonsPanel={() => null}
+				startingInputValue=""
+			>
+				{terminalLineData}
+			</Terminal>
+		</div>
 	);
-};
-export default TerminalController;
+}
