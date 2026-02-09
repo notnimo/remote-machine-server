@@ -54,7 +54,11 @@ const logUserOut = (): boolean => {
 	return true;
 };
 
-const programRoutine = (routine: Routine, userId: string): boolean => {
+const programRoutine = (
+	routine: Routine,
+	userId: string,
+	setFileAccepted: (open: boolean) => void,
+): boolean => {
 	return true;
 };
 

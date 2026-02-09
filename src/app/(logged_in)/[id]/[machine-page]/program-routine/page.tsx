@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/src/components/button";
@@ -11,6 +13,8 @@ import { getUserId, programRoutine } from "@/src/lib/placeholder";
 
 export default function ProgramRoutinePage() {
 	const msg: string = "Program a Routine for your Remote Machine";
+
+	const [fileAccepted, setFileAccepted] = useState(false);
 	return (
 		<div className="flex grow flex-col h-full">
 			<div className="flex flex-col items-center justify-end min-h-[35vh]">
@@ -30,7 +34,7 @@ export default function ProgramRoutinePage() {
 				<div>
 					<Button
 						className="bg-primary-foreground hover:bg-gray-200 text-black flex items-center flex-row justify-between"
-						onClick={() => programRoutine({}, getUserId())}
+						onClick={() => programRoutine({}, getUserId(), setFileAccepted)}
 					>
 						<ArrowRight className="h-4 w-4" />
 						Program Routine
