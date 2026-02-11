@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 import { HomeButton } from "@/src/ui/home-btn";
-import { AccountMngMenu } from "@/src/ui/account-mng/account-mng.tsx";
+import { AccountMngMenu } from "@/src/ui/account-mng/account-mng";
 import "@/src/app/global.css";
 
 export default function RootLayout({ children }: { children: ReactNode }) {

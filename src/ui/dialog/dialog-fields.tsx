@@ -1,4 +1,4 @@
-import { baseField } from "@/src/lib/dialog-type-define";
+import { baseField, baseFieldSelect } from "@/src/lib/dialog-type-define";
 import { CommonField, SelectField } from "@/src/ui/dialog/field-types";
 
 const common = ["email", "password", "text", "number", "tel", "url"];

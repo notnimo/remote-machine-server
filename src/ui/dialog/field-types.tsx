@@ -9,7 +9,9 @@ import {
 	SelectValue,
 } from "@/src/components/select";
 
-import { baseField, baseFieldSelect } from "@/src/lib/dialog-type-define";
+import { baseField } from "@/src/lib/dialog-type-define";
+import { NullFieldException } from "@/src/lib/dialog-types/null-field-exception";
+
 
 export function CommonField({ field }: { field: baseField }) {
 	return (
@@ -26,7 +28,9 @@ export function CommonField({ field }: { field: baseField }) {
 	);
 }
 
-export function SelectField({ field }: { field: baseFieldSelect }) {
+export function SelectField({ field }: { field: baseField }) {
+	if(field === undefined || field === null) throw new NullFieldException("null or undefined field");
+
 	return (
 		<Field>
 			<Label htmlFor={field.htmlFor}>{field.label}</Label>
@@ -35,7 +39,7 @@ export function SelectField({ field }: { field: baseFieldSelect }) {
 					<SelectValue placeholder={field.selectPlaceholder} />
 				</SelectTrigger>
 				<SelectContent className="bg-black text-white">
-					{field.options.map((option: any) => (
+					{field.options && field.options.map((option: any) => (
 						<SelectItem key={option} value={option}>
 							{option}
 						</SelectItem>

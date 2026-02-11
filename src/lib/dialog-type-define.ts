@@ -48,9 +48,16 @@ type baseFieldStd = {
 	type: typeOptions;
 	label: string;
 	placeholder?: string;
+	options?: null;
+	selectPlaceholder?: null;
 	autoComplete?: boolean;
 };
-interface baseFieldSelect extends baseFieldStd {
+type baseFieldSelect = {
+	htmlFor: string;
+	id: string;
+	label: string;
+	placeholder?: string;
+	autoComplete?: boolean;
 	type: "select";
 	options: string[];
 	selectPlaceholder?: string;

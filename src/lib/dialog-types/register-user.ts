@@ -3,6 +3,7 @@ import {
 	baseField,
 	baseCloseButton,
 	cancel,
+	baseFieldSelect,
 } from "@/src/lib/dialog-type-define";
 import { registerUser } from "@/src/lib/placeholder";
 
@@ -24,7 +25,7 @@ const userPasswordField: baseField = {
 	autoComplete: false,
 };
 
-const userAccessLevelField: baseField = {
+const userAccessLevelField: baseFieldSelect = {
 	htmlFor: "access-level",
 	id: "access-level-field",
 	label: "Access Level",
