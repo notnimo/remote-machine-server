@@ -1,6 +1,6 @@
 "use client";
 
-import { TerminalController } from "@/src/ui/machine-page/terminal/terminal.tsx";
+import { TerminalController } from "@/src/ui/machine-page/terminal/terminal";
 
 export default function TerminalPage() {
 	return (
