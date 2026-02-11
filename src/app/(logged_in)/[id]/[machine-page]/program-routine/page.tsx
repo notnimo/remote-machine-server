@@ -12,40 +12,40 @@ import { FilePicker } from "@/src/ui/machine-page/program-routine/file-picker";
 import { getUserId, programRoutine } from "@/src/lib/placeholder";
 
 export default function ProgramRoutinePage() {
-	const msg: string = "Program a Routine for your Remote Machine";
+  const msg: string = "Program a Routine for your Remote Machine";
 
-	const [fileAccepted, setFileAccepted] = useState(false);
-	return (
-		<div className="flex grow flex-col h-full">
-			<div className="flex flex-col items-center justify-end min-h-[35vh]">
-				<TextTyping toType={[msg]} />
-				<div className="text-base">
-					Select a bash file and the time for execution
-				</div>
-			</div>
-			<div className="min-h-[2vh]"></div>
-			<div className=" flex flex-col items-center h-auto">
-				<DatePickerTime />
-				<div className="min-h-[2vh]"></div>
-				<FilePicker />
-			</div>
-			<div className="min-h-[2vh]"></div>
-			<div className="flex justify-center grow">
-				<div>
-					<Button
-						className="bg-primary-foreground hover:bg-gray-200 text-black flex items-center flex-row justify-between"
-						onClick={() => programRoutine({}, getUserId(), setFileAccepted)}
-					>
-						<ArrowRight className="h-4 w-4" />
-						Program Routine
-					</Button>
-				</div>
-				<div>
-					<Button variant="outline" className="ml-4">
-						Cancel
-					</Button>
-				</div>
-			</div>
-		</div>
-	);
+  const [fileAccepted, setFileAccepted] = useState(false);
+  return (
+    <div className="flex grow flex-col h-full">
+      <div className="flex flex-col items-center justify-end min-h-[35vh]">
+        <TextTyping toType={[msg]} />
+        <div className="text-base">
+          Select a bash file and the time for execution
+        </div>
+      </div>
+      <div className="min-h-[2vh]"></div>
+      <div className=" flex flex-col items-center h-auto">
+        <DatePickerTime />
+        <div className="min-h-[2vh]"></div>
+        <FilePicker />
+      </div>
+      <div className="min-h-[2vh]"></div>
+      <div className="flex justify-center grow">
+        <div>
+          <Button
+            className="bg-primary-foreground hover:bg-gray-200 text-black flex items-center flex-row justify-between"
+            onClick={() => programRoutine({}, getUserId(), setFileAccepted)}
+          >
+            <ArrowRight className="h-4 w-4" />
+            Program Routine
+          </Button>
+        </div>
+        <div>
+          <Button variant="outline" className="ml-4">
+            Cancel
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
 }

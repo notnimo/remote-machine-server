@@ -5,34 +5,34 @@ import { Button } from "@/src/components/button";
 import { Item, ItemActions, ItemContent } from "@/src/components/item";
 
 function MachineSectionSkeleton() {
-	return (
-		<>
-			<div className="flex w-full max-w-md flex-col gap-6">
-				<Item variant="outline" className="min-w-2xl">
-					<ItemContent>
-						<Skeleton className="h-4 w-[250px]" />
-					</ItemContent>
-					<ItemActions>
-						<Button variant="outline" size="sm">
-							<Trash />
-						</Button>
-						<Button variant="outline" size="sm">
-							<ScreenShare />
-						</Button>
-					</ItemActions>
-				</Item>
-			</div>
-		</>
-	);
+  return (
+    <>
+      <div className="flex w-full max-w-md flex-col gap-6">
+        <Item variant="outline" className="min-w-2xl">
+          <ItemContent>
+            <Skeleton className="h-4 w-[250px]" />
+          </ItemContent>
+          <ItemActions>
+            <Button variant="outline" size="sm">
+              <Trash />
+            </Button>
+            <Button variant="outline" size="sm">
+              <ScreenShare />
+            </Button>
+          </ItemActions>
+        </Item>
+      </div>
+    </>
+  );
 }
 
 export function MachineSectionSkeletons() {
-	return (
-		<>
-			<MachineSectionSkeleton /> <br />
-			<MachineSectionSkeleton /> <br />
-			<MachineSectionSkeleton /> <br />
-			<MachineSectionSkeleton />
-		</>
-	);
+  return (
+    <>
+      <MachineSectionSkeleton /> <br />
+      <MachineSectionSkeleton /> <br />
+      <MachineSectionSkeleton /> <br />
+      <MachineSectionSkeleton />
+    </>
+  );
 }

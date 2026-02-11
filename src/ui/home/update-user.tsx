@@ -10,22 +10,22 @@ import { updateUserDialog } from "@/src/lib/dialog-types/update-user";
 import { CDialog } from "@/src/ui/dialog/dialog";
 
 export function UpdateUser() {
-	const [updateUserOpen, setUpdateUserOpen] = useState(false);
+  const [updateUserOpen, setUpdateUserOpen] = useState(false);
 
-	return (
-		<>
-			<Button
-				onClick={() => setUpdateUserOpen(true)}
-				className="text-l"
-				variant="outline"
-			>
-				<UserRoundPen /> Update User
-			</Button>
-			<CDialog
-				open={updateUserOpen}
-				onOpenChange={setUpdateUserOpen}
-				dialogProps={updateUserDialog}
-			/>
-		</>
-	);
+  return (
+    <>
+      <Button
+        onClick={() => setUpdateUserOpen(true)}
+        className="text-l"
+        variant="outline"
+      >
+        <UserRoundPen /> Update User
+      </Button>
+      <CDialog
+        open={updateUserOpen}
+        onOpenChange={setUpdateUserOpen}
+        dialogProps={updateUserDialog}
+      />
+    </>
+  );
 }

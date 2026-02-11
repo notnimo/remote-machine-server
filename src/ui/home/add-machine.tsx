@@ -10,22 +10,22 @@ import { addMachineDialog } from "@/src/lib/dialog-types/add-machine";
 import { CDialog } from "@/src/ui/dialog/dialog";
 
 export function AddMachine() {
-	const [addMachineOpen, setAddMachineOpen] = useState(false);
+  const [addMachineOpen, setAddMachineOpen] = useState(false);
 
-	return (
-		<>
-			<Button
-				onClick={() => setAddMachineOpen(true)}
-				className="text-l"
-				variant="outline"
-			>
-				<Plus /> Add Machine
-			</Button>
-			<CDialog
-				open={addMachineOpen}
-				onOpenChange={setAddMachineOpen}
-				dialogProps={addMachineDialog}
-			/>
-		</>
-	);
+  return (
+    <>
+      <Button
+        onClick={() => setAddMachineOpen(true)}
+        className="text-l"
+        variant="outline"
+      >
+        <Plus /> Add Machine
+      </Button>
+      <CDialog
+        open={addMachineOpen}
+        onOpenChange={setAddMachineOpen}
+        dialogProps={addMachineDialog}
+      />
+    </>
+  );
 }

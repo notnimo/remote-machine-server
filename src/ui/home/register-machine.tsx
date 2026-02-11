@@ -10,22 +10,22 @@ import { registerMachineDialog } from "@/src/lib/dialog-types/register-machine";
 import { CDialog } from "@/src/ui/dialog/dialog";
 
 export function RegisterMachine() {
-	const [registerMachineOpen, setRegisterMachineOpen] = useState(false);
+  const [registerMachineOpen, setRegisterMachineOpen] = useState(false);
 
-	return (
-		<>
-			<Button
-				onClick={() => setRegisterMachineOpen(true)}
-				className="text-l"
-				variant="outline"
-			>
-				<LaptopMinimal /> Register Machine
-			</Button>
-			<CDialog
-				open={registerMachineOpen}
-				onOpenChange={setRegisterMachineOpen}
-				dialogProps={registerMachineDialog}
-			/>
-		</>
-	);
+  return (
+    <>
+      <Button
+        onClick={() => setRegisterMachineOpen(true)}
+        className="text-l"
+        variant="outline"
+      >
+        <LaptopMinimal /> Register Machine
+      </Button>
+      <CDialog
+        open={registerMachineOpen}
+        onOpenChange={setRegisterMachineOpen}
+        dialogProps={registerMachineDialog}
+      />
+    </>
+  );
 }

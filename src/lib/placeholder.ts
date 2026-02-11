@@ -3,76 +3,76 @@
 type Routine = {};
 
 const fetchRecent = (userId: string): string[] => {
-	return ["machine_1", "machine_2", "machine_3"];
+  return ["machine_1", "machine_2", "machine_3"];
 };
 
 const fetchMachines = (userId: string): string[] => {
-	return ["machine_1", "machine_2", "machine_3"];
+  return ["machine_1", "machine_2", "machine_3"];
 };
 
 const getUserId = () => {
-	return "user_12345";
+  return "user_12345";
 };
 
 const deleteMachine = (machineId: string, userId: string): boolean => {
-	return true;
+  return true;
 };
 
 const connectMachine = (machineId: string, userId: string): boolean => {
-	return true;
+  return true;
 };
 
 const addMachine = (
-	machineId: string,
-	machinePassword: string,
-	userId: string,
+  machineId: string,
+  machinePassword: string,
+  userId: string
 ): boolean => {
-	return true;
+  return true;
 };
 
 const updateMachine = (
-	machineId: string,
-	newDetails: any,
-	userId: string,
+  machineId: string,
+  newDetails: any,
+  userId: string
 ): boolean => {
-	return true;
+  return true;
 };
 
 const registerMachine = (machineDetails: any, userId: string): boolean => {
-	return true;
+  return true;
 };
 
 const registerUser = (userDetails: any): string => {
-	return "user_12345";
+  return "user_12345";
 };
 
 const updateUser = (userId: string, newDetails: any): boolean => {
-	return true;
+  return true;
 };
 
 const logUserOut = (): boolean => {
-	return true;
+  return true;
 };
 
 const programRoutine = (
-	routine: Routine,
-	userId: string,
-	setFileAccepted: (open: boolean) => void,
+  routine: Routine,
+  userId: string,
+  setFileAccepted: (open: boolean) => void
 ): boolean => {
-	return true;
+  return true;
 };
 
 export {
-	getUserId,
-	fetchMachines,
-	fetchRecent,
-	deleteMachine,
-	connectMachine,
-	addMachine,
-	updateMachine,
-	registerMachine,
-	registerUser,
-	updateUser,
-	logUserOut,
-	programRoutine,
+  getUserId,
+  fetchMachines,
+  fetchRecent,
+  deleteMachine,
+  connectMachine,
+  addMachine,
+  updateMachine,
+  registerMachine,
+  registerUser,
+  updateUser,
+  logUserOut,
+  programRoutine,
 };

@@ -2,50 +2,51 @@ import { Field } from "@/src/components/field";
 import { Input } from "@/src/components/input";
 import { Label } from "@/src/components/label";
 import {
-	Select,
-	SelectContent,
-	SelectItem,
-	SelectTrigger,
-	SelectValue,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
 } from "@/src/components/select";
 
 import { baseField } from "@/src/lib/dialog-type-define";
 import { NullFieldException } from "@/src/lib/dialog-types/null-field-exception";
 
-
 export function CommonField({ field }: { field: baseField }) {
-	return (
-		<Field>
-			<Label htmlFor={field.htmlFor}>{field.label}</Label>
-			<Input
-				id={field.id}
-				name={field.htmlFor}
-				type={field.type}
-				placeholder={field.placeholder}
-				autoComplete={field.autoComplete ? "on" : "off"}
-			/>
-		</Field>
-	);
+  return (
+    <Field>
+      <Label htmlFor={field.htmlFor}>{field.label}</Label>
+      <Input
+        id={field.id}
+        name={field.htmlFor}
+        type={field.type}
+        placeholder={field.placeholder}
+        autoComplete={field.autoComplete ? "on" : "off"}
+      />
+    </Field>
+  );
 }
 
 export function SelectField({ field }: { field: baseField }) {
-	if(field === undefined || field === null) throw new NullFieldException("null or undefined field");
+  if (field === undefined || field === null)
+    throw new NullFieldException("null or undefined field");
 
-	return (
-		<Field>
-			<Label htmlFor={field.htmlFor}>{field.label}</Label>
-			<Select>
-				<SelectTrigger className="w-full">
-					<SelectValue placeholder={field.selectPlaceholder} />
-				</SelectTrigger>
-				<SelectContent className="bg-black text-white">
-					{field.options && field.options.map((option: any) => (
-						<SelectItem key={option} value={option}>
-							{option}
-						</SelectItem>
-					))}
-				</SelectContent>
-			</Select>
-		</Field>
-	);
+  return (
+    <Field>
+      <Label htmlFor={field.htmlFor}>{field.label}</Label>
+      <Select>
+        <SelectTrigger className="w-full">
+          <SelectValue placeholder={field.selectPlaceholder} />
+        </SelectTrigger>
+        <SelectContent className="bg-black text-white">
+          {field.options &&
+            field.options.map((option: any) => (
+              <SelectItem key={option} value={option}>
+                {option}
+              </SelectItem>
+            ))}
+        </SelectContent>
+      </Select>
+    </Field>
+  );
 }

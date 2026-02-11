@@ -10,22 +10,22 @@ import { updateMachineDialog } from "@/src/lib/dialog-types/update-machine";
 import { CDialog } from "@/src/ui/dialog/dialog";
 
 export function UpdateMachine() {
-	const [updateMachineOpen, setUpdateMachineOpen] = useState(false);
+  const [updateMachineOpen, setUpdateMachineOpen] = useState(false);
 
-	return (
-		<>
-			<Button
-				onClick={() => setUpdateMachineOpen(true)}
-				className="text-l"
-				variant="outline"
-			>
-				<RefreshCw /> Update Machine
-			</Button>
-			<CDialog
-				open={updateMachineOpen}
-				onOpenChange={setUpdateMachineOpen}
-				dialogProps={updateMachineDialog}
-			/>
-		</>
-	);
+  return (
+    <>
+      <Button
+        onClick={() => setUpdateMachineOpen(true)}
+        className="text-l"
+        variant="outline"
+      >
+        <RefreshCw /> Update Machine
+      </Button>
+      <CDialog
+        open={updateMachineOpen}
+        onOpenChange={setUpdateMachineOpen}
+        dialogProps={updateMachineDialog}
+      />
+    </>
+  );
 }
