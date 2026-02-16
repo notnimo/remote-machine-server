@@ -1,6 +1,7 @@
 // placeholders
 
 type Routine = {};
+type File_c = {};
 
 const fetchRecent = (userId: string): string[] => {
   return ["machine_1", "machine_2", "machine_3"];
@@ -62,6 +63,14 @@ const programRoutine = (
   return true;
 };
 
+const transferFile = (
+  routine: File_c,
+  userId: string,
+  setFileAccepted: (open: boolean) => void
+): boolean => {
+  return true;
+};
+
 export {
   getUserId,
   fetchMachines,
@@ -75,4 +84,5 @@ export {
   updateUser,
   logUserOut,
   programRoutine,
+  transferFile,
 };

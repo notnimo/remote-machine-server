@@ -1,13 +1,15 @@
 import { Field, FieldDescription, FieldLabel } from "@/src/components/field";
 import { Input } from "@/src/components/input";
 
-export function FilePicker() {
+import { PickerContent } from "@/src/lib/file-picker-content";
+
+export function FilePicker({ content }: { content: PickerContent }) {
   return (
     <div className="max-w-xl">
       <Field>
-        <FieldLabel htmlFor="picture">Bash File</FieldLabel>
-        <Input id="picture" type="file" accept=".sh" />
-        <FieldDescription>Select your bash routine.</FieldDescription>
+        <FieldLabel htmlFor="fileInput">{content.label}</FieldLabel>
+        <Input id="fileInput" type="file" accept={content.accept} />
+        <FieldDescription>{content.description}</FieldDescription>
       </Field>
     </div>
   );

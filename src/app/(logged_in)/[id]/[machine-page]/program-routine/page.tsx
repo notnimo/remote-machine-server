@@ -27,7 +27,13 @@ export default function ProgramRoutinePage() {
       <div className=" flex flex-col items-center h-auto">
         <DatePickerTime />
         <div className="min-h-[2vh]"></div>
-        <FilePicker />
+        <FilePicker
+          content={{
+            label: "Bash File",
+            description: "Select your bash routine.",
+            accept: ".sh",
+          }}
+        />
       </div>
       <div className="min-h-[2vh]"></div>
       <div className="flex justify-center grow">
