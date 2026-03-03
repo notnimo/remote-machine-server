@@ -15,7 +15,7 @@ export default function FileTransferPage() {
 
   const [fileAccepted, setFileAccepted] = useState(false);
   return (
-    <div className="flex grow flex-col h-full">
+    <div className="flex grow flex-col h-full items-center">
       <div className="flex flex-col items-center justify-end min-h-[35vh]">
         <TextTyping toType={[msg]} />
         <div className="text-base">Select the file to send</div>
