@@ -2,13 +2,14 @@
 
 type Routine = {};
 type File_c = {};
+type Machine = {};
 
-const fetchRecent = (userId: string): string[] => {
-  return ["machine_1", "machine_2", "machine_3"];
+const fetchRecent = (userId: string): Machine[] => {
+  return [{}, {}, {}];
 };
 
-const fetchMachines = (userId: string): string[] => {
-  return ["machine_1", "machine_2", "machine_3"];
+const fetchMachines = (userId: string): Machine[] => {
+  return [{}, {}, {}];
 };
 
 const getUserId = () => {
@@ -70,6 +71,8 @@ const transferFile = (
 ): boolean => {
   return true;
 };
+
+export type { Routine, File_c, Machine };
 
 export {
   getUserId,

@@ -7,8 +7,8 @@ import {
   ItemContent,
   ItemTitle,
 } from "@/src/components/item";
-
 import {
+  Machine,
   getUserId,
   deleteMachine,
   connectMachine,
@@ -45,14 +45,14 @@ function MachineItem({ machineID }: { machineID: string }) {
 export function MachineSection({
   fetchMachines,
 }: {
-  fetchMachines: (userId: string) => string[];
+  fetchMachines: (userId: string) => Machine[];
 }) {
-  const recent_machines: string[] = fetchMachines(getUserId());
+  const machines: Machine[] = fetchMachines(getUserId());
   let temp;
-  for (let machineID in recent_machines) {
+  for (let machine in machines) {
     temp = (
       <>
-        {temp} <MachineItem machineID={recent_machines[machineID]} /> <br />
+        {temp} <MachineItem machineID={machines[machine]} /> <br />
       </>
     );
   }
