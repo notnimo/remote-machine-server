@@ -2,25 +2,25 @@
 
 type Routine = {};
 type File_c = {};
-type Machine = {};
+type Machine = { name: string };
 
 const fetchRecent = (userId: string): Machine[] => {
-  return [{}, {}, {}];
+  return [{ name: "Machine 1" }, { name: "Machine 2" }, { name: "Machine 3" }];
 };
 
 const fetchMachines = (userId: string): Machine[] => {
-  return [{}, {}, {}];
+  return [{ name: "Machine 1" }, { name: "Machine 2" }, { name: "Machine 3" }];
 };
 
 const getUserId = () => {
   return "user_12345";
 };
 
-const deleteMachine = (machineId: string, userId: string): boolean => {
+const deleteMachine = (machineId: Machine, userId: string): boolean => {
   return true;
 };
 
-const connectMachine = (machineId: string, userId: string): boolean => {
+const connectMachine = (machineId: Machine, userId: string): boolean => {
   return true;
 };
 

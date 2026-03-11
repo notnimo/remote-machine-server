@@ -52,7 +52,7 @@ export function MachineSection({
   for (let machine in machines) {
     temp = (
       <>
-        {temp} <MachineItem machineID={machines[machine]} /> <br />
+        {temp} <MachineItem machineID={machines[machine].name} /> <br />
       </>
     );
   }
