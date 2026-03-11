@@ -7,12 +7,8 @@ import {
   ItemContent,
   ItemTitle,
 } from "@/src/components/item";
-import {
-  Machine,
-  getUserId,
-  deleteMachine,
-  connectMachine,
-} from "@/src/lib/placeholder";
+import { Machine, deleteMachine, connectMachine } from "@/src/lib/machine-def";
+import { getUserId } from "@/src/lib/placeholder";
 
 function MachineItem({ machineID }: { machineID: string }) {
   return (
