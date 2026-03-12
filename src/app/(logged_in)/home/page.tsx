@@ -7,10 +7,10 @@ import { RegisterMachine } from "@/src/ui/home/register-machine";
 import { UpdateMachine } from "@/src/ui/home/update-machine";
 import { RegisterUser } from "@/src/ui/home/register-user";
 import { UpdateUser } from "@/src/ui/home/update-user";
-import { MachineSection } from "@/src/ui/machine-menu/machine-card";
-import { MachineSectionSkeletons } from "@/src/ui/machine-menu/machine-skeletons";
-
-import { fetchMachines, fetchRecent } from "@/src/lib/machine-def";
+import {
+  MachineSection,
+  RecentSection,
+} from "@/src/ui/machine-menu/machines-home";
 
 export default function Page() {
   return (
@@ -29,16 +29,12 @@ export default function Page() {
           <div>
             <h1>Your Machines</h1>
             <br /> <br />
-            <Suspense fallback={<MachineSectionSkeletons />}>
-              <MachineSection fetchMachines={fetchMachines} />
-            </Suspense>
+            <MachineSection />
           </div>
           <div>
             <h1>Recent Machines</h1>
             <br /> <br />
-            <Suspense fallback={<MachineSectionSkeletons />}>
-              <MachineSection fetchMachines={fetchRecent} />
-            </Suspense>
+            <RecentSection />
           </div>
         </div>
       </div>
