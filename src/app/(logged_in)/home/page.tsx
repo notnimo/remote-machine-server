@@ -1,7 +1,3 @@
-"use client";
-
-import { Suspense } from "react";
-
 import { AddMachine } from "@/src/ui/home/add-machine";
 import { RegisterMachine } from "@/src/ui/home/register-machine";
 import { UpdateMachine } from "@/src/ui/home/update-machine";

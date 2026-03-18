@@ -1,4 +1,7 @@
-type Machine = { name: string };
+type Machine = { 
+  name: string
+
+ };
 
 const fetchRecent = (userId: string): Machine[] => {
   return [{ name: "Machine 1" }, { name: "Machine 2" }, { name: "Machine 3" }];
