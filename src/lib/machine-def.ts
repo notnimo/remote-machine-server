@@ -1,14 +1,28 @@
-type Machine = { 
-  name: string
+type Machine = {
+  id: string;
+  name: string; // add as field when registering machine
+  owner: string;
+  status: string;
+  accessLevel: string;
+};
 
- };
+const sampleMachine: Machine[] = [
+  // Sample machine data; real data will be fetched from database
+  {
+    id: "machine-1",
+    name: "Machine 1",
+    owner: "user-1",
+    status: "online",
+    accessLevel: "admin",
+  },
+];
 
 const fetchRecent = (userId: string): Machine[] => {
-  return [{ name: "Machine 1" }, { name: "Machine 2" }, { name: "Machine 3" }];
+  return sampleMachine;
 };
 
 const fetchMachines = (userId: string): Machine[] => {
-  return [{ name: "Machine 1" }, { name: "Machine 2" }, { name: "Machine 3" }];
+  return sampleMachine;
 };
 
 const deleteMachine = (machineId: Machine, userId: string): boolean => {
