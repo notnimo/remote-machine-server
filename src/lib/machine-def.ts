@@ -25,11 +25,11 @@ const fetchMachines = (userId: string): Machine[] => {
   return sampleMachine;
 };
 
-const deleteMachine = (machineId: Machine, userId: string): boolean => {
+const deleteMachine = (machine: Machine, userId: string): boolean => {
   return true;
 };
 
-const connectMachine = (machineId: Machine, userId: string): boolean => {
+const connectMachine = (machine: Machine, userId: string): boolean => {
   return true;
 };
 
@@ -53,6 +53,13 @@ const registerMachine = (machineDetails: any, userId: string): boolean => {
   return true;
 };
 
+const getMachine = (machineId: string): Machine => {
+  return (
+    sampleMachine.find((machine) => machine.id === machineId) ||
+    sampleMachine[0]
+  );
+};
+
 export type { Machine };
 export {
   fetchMachines,
@@ -62,4 +69,5 @@ export {
   addMachine,
   updateMachine,
   registerMachine,
+  getMachine,
 };
