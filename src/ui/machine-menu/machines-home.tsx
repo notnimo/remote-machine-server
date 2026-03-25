@@ -18,19 +18,11 @@ async function getRecentData(): Promise<Machine[]> {
 export async function MachineSection() {
   const data = await getMachineData();
 
-  return (
-    <div className="container mx-auto py-10">
-      <DataTable columns={columns} data={data} />
-    </div>
-  );
+  return <DataTable columns={columns} data={data} />;
 }
 
 export async function RecentSection() {
   const recentData = await getRecentData();
 
-  return (
-    <div className="container mx-auto py-10">
-      <DataTable columns={columns} data={recentData} />
-    </div>
-  );
+  return <DataTable columns={columns} data={recentData} />;
 }

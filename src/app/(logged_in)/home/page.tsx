@@ -24,12 +24,10 @@ export default function Page() {
         <div className="flex flex-row justify-around">
           <div>
             <h1>Your Machines</h1>
-            <br /> <br />
             <MachineSection />
           </div>
           <div>
             <h1>Recent Machines</h1>
-            <br /> <br />
             <RecentSection />
           </div>
         </div>
