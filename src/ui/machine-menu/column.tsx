@@ -30,21 +30,21 @@ export const columns: ColumnDef<Machine>[] = [
 
       return <div className="text-right font-medium">{formattedId}</div>;
     },
+    header: () => <div className="text-right">ID</div>,
+  },
+  {
+    accessorKey: "name",
     header: ({ column }) => {
       return (
         <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          ID
+          Name
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       );
     },
-  },
-  {
-    accessorKey: "name",
-    header: () => <div className="text-right">Name</div>,
   },
   {
     accessorKey: "owner",

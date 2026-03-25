@@ -1,15 +1,17 @@
 "use client";
 
-import * as React from "react"
+import * as React from "react";
 
 import {
   ColumnDef,
+  ColumnFiltersState,
+  SortingState,
   flexRender,
   getCoreRowModel,
-  useReactTable,
+  getFilteredRowModel,
   getPaginationRowModel,
-  SortingState,
   getSortedRowModel,
+  useReactTable,
 } from "@tanstack/react-table";
 
 import {
@@ -21,6 +23,7 @@ import {
   TableRow,
 } from "@/src/components/table";
 import { Button } from "@/src/components/button";
+import { Input } from "@/src/components/input";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -32,6 +35,9 @@ export function DataTable<TData, TValue>({
   data,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
+    []
+  );
 
   const table = useReactTable({
     data,
@@ -40,13 +46,26 @@ export function DataTable<TData, TValue>({
     getPaginationRowModel: getPaginationRowModel(),
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
+    onColumnFiltersChange: setColumnFilters,
+    getFilteredRowModel: getFilteredRowModel(),
     state: {
       sorting,
+      columnFilters,
     },
   });
 
   return (
     <div>
+      <div className="flex items-center py-4">
+        <Input
+          placeholder="Search by Machine name"
+          value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
+          onChange={(event) =>
+            table.getColumn("name")?.setFilterValue(event.target.value)
+          }
+          className="max-w-sm"
+        />
+      </div>
       <div className="overflow-hidden rounded-md border">
         <Table>
           <TableHeader>
