@@ -4,7 +4,7 @@ import {
   baseCloseButton,
   cancel,
 } from "@/src/lib/dialog-type-define";
-import { addMachine } from "@/src/lib/placeholder";
+import { addMachine } from "@/src/lib/machine-def";
 
 const machineIDField: baseField = {
   htmlFor: "machine-id",

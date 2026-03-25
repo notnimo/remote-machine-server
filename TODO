@@ -1,3 +1,13 @@
 FIX IMPORTS done
-FIX TAILWINDCSS 
-replace existing things with shadcn components https://ui.shadcn.com/blocks
+FIX TAILWINDCSS done
+replace existing things with shadcn components done
+  - sidebar ABORTED
+  - data-table done
+    - base done
+    - cell formatting done
+    - row actions done 
+    - pagination done
+    - sorting done
+    - filtering done
+    - visibility done
+    - row selection ABORTED
