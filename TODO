@@ -1,13 +1,26 @@
-FIX IMPORTS done
-FIX TAILWINDCSS done
-replace existing things with shadcn components done
-  - sidebar ABORTED
-  - data-table done
-    - base done
-    - cell formatting done
-    - row actions done 
-    - pagination done
-    - sorting done
-    - filtering done
-    - visibility done
-    - row selection ABORTED
+style
+  FIX IMPORTS done
+  FIX TAILWINDCSS done
+  replace existing things with shadcn components done
+    - sidebar ABORTED
+    - data-table done
+      - base done
+      - cell formatting done
+      - row actions done 
+      - pagination done
+      - sorting done
+      - filtering done
+      - visibility done
+      - row selection ABORTED
+
+utility
+  terminal
+    research
+    accept input
+  auth
+    research
+    next auth
+  databases
+    research
+  connect machine
+    research
